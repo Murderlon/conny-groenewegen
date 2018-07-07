@@ -1,5 +1,5 @@
 backend:
-  name: conny-groenenwegen
+  name: conny-groenewegen
   repo: Murderlon/conny-groenenwegen
 
 media_folder: static/assets
