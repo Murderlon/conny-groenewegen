@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: conny-groenenwegen
+  repo: Murderlon/conny-groenenwegen
 
 media_folder: static/assets
 public_folder: assets
