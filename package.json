@@ -1,16 +1,35 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "description": "Gatsby hello world starter",
+  "name": "conny-groenewegen",
+  "description": "Personal website for Conny Groenewegen",
   "license": "MIT",
+  "repository": "Murderlon/conny-groenewegen",
+  "bugs": "https://github.com/Murderlon/conny-groenewegen/issues",
+  "author": "Merlijn Vos <hello@murderlon.me> (https://murderlon.me)",
+  "contributors": [
+    "Merlijn Vos <hello@murderlon.me> (https://murderlon.me)"
+  ],
   "scripts": {
     "develop": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "gatsby": "^1.9.250",
+    "gatsby": "^1.9.273",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-netlify-cms": "^2.0.1",
-    "netlify-cms": "^1.9.3"
+    "gatsby-plugin-react-next": "^1.0.11",
+    "gatsby-plugin-styled-components": "^2.0.11",
+    "netlify-cms": "^1.9.3",
+    "polished": "^1.9.3",
+    "styled-components": "^3.3.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.5",
+    "babel-plugin-styled-components": "^1.5.1",
+    "eslint": "^5.0.1",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-react": "^7.10.0",
+    "gatsby-plugin-eslint": "^1.0.3"
   }
 }
