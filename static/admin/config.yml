@@ -1,6 +1,6 @@
 backend:
-  name: conny-groenewegen
-  repo: Murderlon/conny-groenenwegen
+  name: github
+  repo: Murderlon/conny-groenewegen
 
 media_folder: static/assets
 public_folder: assets
