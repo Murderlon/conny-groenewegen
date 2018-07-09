@@ -1,6 +1,7 @@
 {
   "name": "conny-groenewegen",
   "description": "Personal website for Conny Groenewegen",
+  "private": true,
   "license": "MIT",
   "repository": "Murderlon/conny-groenewegen",
   "bugs": "https://github.com/Murderlon/conny-groenewegen/issues",
@@ -18,6 +19,7 @@
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-netlify-cms": "^2.0.1",
     "gatsby-plugin-react-next": "^1.0.11",
+    "gatsby-plugin-react-svg": "^1.1.1",
     "gatsby-plugin-styled-components": "^2.0.11",
     "netlify-cms": "^1.9.3",
     "polished": "^1.9.3",

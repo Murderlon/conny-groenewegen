@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="110" height="45" viewBox="0 0 110 45">
+  <g fill="currentColor" fill-rule="evenodd">
+    <circle cx="2.5" cy="2.5" r="2.5"/>
+    <circle cx="17.5" cy="2.5" r="2.5"/>
+    <circle cx="32.5" cy="2.5" r="2.5"/>
+    <circle cx="47.5" cy="2.5" r="2.5"/>
+    <circle cx="62.5" cy="2.5" r="2.5"/>
+    <circle cx="77.5" cy="2.5" r="2.5"/>
+    <circle cx="92.5" cy="2.5" r="2.5"/>
+    <circle cx="107.5" cy="2.5" r="2.5"/>
+    <circle cx="2.5" cy="22.5" r="2.5"/>
+    <circle cx="17.5" cy="22.5" r="2.5"/>
+    <circle cx="32.5" cy="22.5" r="2.5"/>
+    <circle cx="47.5" cy="22.5" r="2.5"/>
+    <circle cx="62.5" cy="22.5" r="2.5"/>
+    <circle cx="77.5" cy="22.5" r="2.5"/>
+    <circle cx="92.5" cy="22.5" r="2.5"/>
+    <circle cx="107.5" cy="22.5" r="2.5"/>
+    <circle cx="2.5" cy="42.5" r="2.5"/>
+    <circle cx="17.5" cy="42.5" r="2.5"/>
+    <circle cx="32.5" cy="42.5" r="2.5"/>
+    <circle cx="47.5" cy="42.5" r="2.5"/>
+    <circle cx="62.5" cy="42.5" r="2.5"/>
+    <circle cx="77.5" cy="42.5" r="2.5"/>
+    <circle cx="92.5" cy="42.5" r="2.5"/>
+    <circle cx="107.5" cy="42.5" r="2.5"/>
+  </g>
+</svg>
