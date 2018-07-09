@@ -1,4 +1,5 @@
 import { css } from 'styled-components'
+import { black, white } from '../themes/colors'
 
 const base = css`
   html {
@@ -13,7 +14,8 @@ const base = css`
 
   body {
     margin: 0;
-    background-color: #e8ebed;
+    background: ${black};
+    color: ${white};
   }
 
   /**

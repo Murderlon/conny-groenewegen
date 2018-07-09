@@ -1,4 +1,4 @@
-import modularScale from 'styles/helpers/modular-scale'
+import modularScale from '../helpers/modular-scale'
 
 const variables = {
   spacing: {
