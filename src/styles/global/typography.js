@@ -3,6 +3,8 @@ import { css } from 'styled-components'
 import modularScale from '../helpers/modular-scale'
 
 const typography = css`
+  @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:500|IBM+Plex+Sans:400,500,700');
+
   @media screen and (min-width: 110em) {
     html {
       font-size: calc(1.125em + 0.05vw);
@@ -10,8 +12,8 @@ const typography = css`
   }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-      Helvetica, Arial, sans-serif;
+    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, Helvetica, Arial, sans-serif;
     font-weight: 400;
     font-variant: common-ligatures lining-nums contextual;
     line-height: 1.6;
