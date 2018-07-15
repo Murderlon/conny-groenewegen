@@ -28,7 +28,7 @@ const typography = css`
     line-height: 1.2;
     margin-top: 0;
     margin-bottom: 0.75em;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   h1 {
