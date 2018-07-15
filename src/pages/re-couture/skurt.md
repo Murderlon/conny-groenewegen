@@ -1,8 +1,14 @@
 ---
 templateKey: project-detail
-date: '2018-07-14'
-title: Skurt
-image: /assets/future-retro.jpg
+title: This is definitely a project.
+headerImage: /assets/future-retro.jpg
+description: Super cool project description bruva.
+images:
+  image1:
+    alt: Kandinsky painting
+    image: /assets/kandinsky.jpg
+  image2:
+    alt: Some street art thing parting pull up
+    image: /assets/alena-aenami-7p-m-1k.jpg
 ---
 
-Waddup
