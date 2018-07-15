@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react'
-import { injectGlobal, ThemeProvider } from 'styled-components'
+import styled, { injectGlobal, ThemeProvider } from 'styled-components'
 import { func } from 'prop-types'
 
+import LogoSVG from '../icons/logo.svg'
 import base from '../styles/global/base'
 import typography from '../styles/global/typography'
 import variables from '../styles/themes/variables'
@@ -12,9 +13,26 @@ injectGlobal`
   ${typography}
 `
 
+const Main = styled.main`
+  margin: ${p => p.theme.spacing.medium};
+`
+const Logo = styled(LogoSVG)`
+  color: ${p => p.theme.white};
+`
+const Header = styled.header`
+  margin: ${p => p.theme.spacing.xlarge} 0;
+  display: flex;
+  justify-content: center;
+`
+
 const TemplateWrapper = ({ children }) => (
   <ThemeProvider theme={{ ...colors, ...variables }}>
-    <Fragment>{children()}</Fragment>
+    <Fragment>
+      <Header>
+        <Logo />
+      </Header>
+      <Main>{children()}</Main>
+    </Fragment>
   </ThemeProvider>
 )
 
