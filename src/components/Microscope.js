@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import styled from 'styled-components'
+import Link from 'gatsby-link'
+import Img from 'gatsby-image'
 
-import couture from '../images/couture-preview.jpg'
+import Arrow from '../icons/arrow.svg'
 
 const Figure = styled.figure`
-  margin: 0;
+  margin: ${p => p.theme.spacing.huge} 0;
   display: flex;
   justify-content: center;
 `
@@ -15,24 +17,19 @@ const Figcaption = styled.figcaption`
   top: ${p => p.theme.spacing.xlarge};
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 3em;
+  font-size: 2.5em;
   transform: rotate(90deg);
-  z-index: 100;
-
-  span {
-    color: ${p => p.theme.green};
-  }
 `
 
 const Wrapper = styled.div`
   position: relative;
 `
 
-const ImageWrapper = styled.div`
-  position: relative;
-  margin: 0;
-  width: 17em;
-  height: 17em;
+const Image = styled(Img)`
+  object-fit: cover;
+  border-radius: 50%;
+  width: 15em;
+  height: 15em;
 
   &::after {
     position: absolute;
@@ -49,24 +46,41 @@ const ImageWrapper = styled.div`
   }
 `
 
-const Image = styled.img`
-  object-fit: cover;
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
+const Span = styled.span`
+  color: ${({ color }) => color};
 `
 
-const Microscope = () => (
-  <Figure>
-    <Wrapper>
-      <ImageWrapper>
-        <Image src={couture} alt="pull up skurt" />
-      </ImageWrapper>
-      <Figcaption>
-        <span>re:</span>couture
-      </Figcaption>
-    </Wrapper>
-  </Figure>
+const Button = styled(Link)`
+  position: absolute;
+  right: 3em;
+  bottom: 10em;
+  background: ${({ color }) => color};
+  color: ${({ theme }) => theme.black};
+  padding: ${({ theme }) => `${theme.spacing.xsmall} ${theme.spacing.small}`};
+  font-family: 'IBM Plex Mono', mono;
+  border-radius: 3px;
+
+  svg {
+    margin-left: ${({ theme }) => theme.spacing.small};
+  }
+`
+
+const Microscope = ({ image, title, color }) => (
+  <Fragment>
+    <Figure>
+      <Wrapper>
+        <Image sizes={image.sizes} />
+        <Figcaption>
+          <Span color={color}>re-</Span>
+          {title}
+        </Figcaption>
+      </Wrapper>
+    </Figure>
+    <Button to={`re-${title}`} color={color}>
+      Explore
+      <Arrow />
+    </Button>
+  </Fragment>
 )
 
 export default Microscope
