@@ -1,6 +1,6 @@
 ---
 templateKey: project-detail
-title: '*zucht*'
+title: Super cool project
 headerImage: /assets/future-retro.jpg
 description: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
