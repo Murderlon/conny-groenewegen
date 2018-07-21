@@ -2,7 +2,7 @@
 templateKey: project-detail
 title: This is definitely a project.
 headerImage: /assets/future-retro.jpg
-description: Super cool project description bruva.
+description: ''
 images:
   image1:
     alt: Kandinsky painting
