@@ -12,65 +12,22 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "project-detail" }
+      - { label: Template Key, name: templateKey, widget: hidden, default: project-detail }
       - { name: title, label: Title }
-      - { name: headerImage, label: Header image, widget: image }
-      - { name: description, label: Project description, widget: text }
-      - { label: Image grid, name: images, widget: object, fields: 
-          [
-            { 
-              label: Image1,
-              name: image1,
-              widget: object,
-              fields: [
-                { label: file, name: image, widget: image },
-                { label: alternative text description, name: alt, widget: string }
-              ]
-            }, 
-            { 
-              label: Image2,
-              name: image2,
-              widget: object,
-              fields: [
-                { label: file, name: image, widget: image},
-                { label: alternative text description, name: alt, widget: string }
-              ]
-            }, 
-            { 
-              label: Image3,
-              name: image3,
-              widget: object,
-              fields: [
-                { label: file, name: image, widget: image },
-                { label: alternative text description, name: alt, widget: string }
-              ]
-            },
-            { 
-              label: Image4,
-              name: image4,
-              widget: object,
-              fields: [
-                { label: file, name: image, widget: image },
-                { label: alternative text description, name: alt, widget: string }
-              ]
-            },
-            { 
-              label: Image5,
-              name: image5,
-              widget: object,
-              fields: [
-                { label: file, name: image, widget: image },
-                { label: alternative text description, name: alt, widget: string }
-              ]
-            },
-            { 
-              label: Image6,
-              name: image6,
-              widget: object,
-              fields: [
-                { label: file, name: image, widget: image },
-                { label: alternative text description, name: alt, widget: string }
-              ]
-            }
+      - { 
+          name: headerImage,
+          label: Header image,
+          widget: object,
+          fields: [
+            { label: file, name: image, widget: image },
+            { label: alternative text description, name: alt, widget: string }
           ]
         }
+      - { name: description, label: Project description, widget: text }
+      - label: Images
+        name: images
+        widget: list
+        fields:
+          - { label: file, name: image, widget: image }
+          - { label: alternative text description, name: alt, widget: string }
+            
