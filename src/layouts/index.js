@@ -1,8 +1,9 @@
 import React, { Fragment } from 'react'
 import styled, { injectGlobal, ThemeProvider } from 'styled-components'
-import { func } from 'prop-types'
 
 import LogoSVG from '../icons/logo.svg'
+import Footer from '../components/Footer'
+
 import base from '../styles/global/base'
 import typography from '../styles/global/typography'
 import variables from '../styles/themes/variables'
@@ -32,12 +33,9 @@ const TemplateWrapper = ({ children }) => (
         <Logo />
       </Header>
       <Main>{children()}</Main>
+      <Footer />
     </Fragment>
   </ThemeProvider>
 )
-
-TemplateWrapper.propTypes = {
-  children: func
-}
 
 export default TemplateWrapper
