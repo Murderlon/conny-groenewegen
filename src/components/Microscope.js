@@ -1,9 +1,13 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 
 import Arrow from '../icons/arrow.svg'
+
+const Section = styled.section`
+  position: relative;
+`
 
 const Figure = styled.figure`
   margin: ${p => p.theme.spacing.huge} 0;
@@ -13,12 +17,11 @@ const Figure = styled.figure`
 
 const Figcaption = styled.figcaption`
   position: absolute;
-  left: -${p => p.theme.spacing.xlarge};
-  top: ${p => p.theme.spacing.xlarge};
+  top: 0;
+  word-break: keep-all;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 2.5em;
-  transform: rotate(90deg);
 `
 
 const Wrapper = styled.div`
@@ -52,12 +55,13 @@ const Span = styled.span`
 
 const Button = styled(Link)`
   position: absolute;
-  right: 3em;
-  bottom: 10em;
+  right: 2em;
+  bottom: 0;
   background: ${({ color }) => color};
   color: ${({ theme }) => theme.black};
   padding: ${({ theme }) => `${theme.spacing.xsmall} ${theme.spacing.small}`};
   font-family: 'IBM Plex Mono', mono;
+  font-weight: 500;
   border-radius: 3px;
 
   svg {
@@ -66,7 +70,7 @@ const Button = styled(Link)`
 `
 
 const Microscope = ({ image, title, color }) => (
-  <Fragment>
+  <Section>
     <Figure>
       <Wrapper>
         <Image sizes={image.sizes} />
@@ -80,7 +84,7 @@ const Microscope = ({ image, title, color }) => (
       Explore
       <Arrow />
     </Button>
-  </Fragment>
+  </Section>
 )
 
 export default Microscope
