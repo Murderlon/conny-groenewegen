@@ -13,7 +13,7 @@ const StyledFooter = styled.footer`
     border-radius: 50%;
     background: white;
     padding-left: 7em;
-    padding-top: 2em;
+    padding-top: 3em;
     left: -6em;
     bottom: -3em;
     width: 25em;
