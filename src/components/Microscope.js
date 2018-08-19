@@ -17,15 +17,12 @@ const Figure = styled.figure`
 
 const Figcaption = styled.figcaption`
   position: absolute;
-  top: 0;
+  top: -1em;
+  left: 0;
   word-break: keep-all;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 2.5em;
-`
-
-const Wrapper = styled.div`
-  position: relative;
+  font-size: 2.2em;
 `
 
 const Image = styled(Img)`
@@ -39,7 +36,6 @@ const Image = styled(Img)`
     left: 0;
     top: 0;
     content: '';
-    display: block;
     width: 100%;
     height: 100%;
     box-shadow: inset 0 0 20px ${({ theme }) => theme.black},
@@ -61,7 +57,7 @@ const Button = styled(Link)`
   color: ${({ theme }) => theme.black};
   padding: ${({ theme }) => `${theme.spacing.xsmall} ${theme.spacing.small}`};
   font-family: 'IBM Plex Mono', mono;
-  font-weight: 500;
+  text-transform: uppercase;
   border-radius: 3px;
 
   svg {
@@ -72,13 +68,11 @@ const Button = styled(Link)`
 const Microscope = ({ image, title, color }) => (
   <Section>
     <Figure>
-      <Wrapper>
-        <Image sizes={image.sizes} />
-        <Figcaption>
-          <Span color={color}>re-</Span>
-          {title}
-        </Figcaption>
-      </Wrapper>
+      <Image sizes={image.sizes} />
+      <Figcaption>
+        re-
+        <Span color={color}>{title}</Span>
+      </Figcaption>
     </Figure>
     <Button to={`re-${title}`} color={color}>
       Explore
