@@ -5,20 +5,21 @@ import Img from 'gatsby-image'
 
 import Arrow from '../icons/arrow.svg'
 
-const Section = styled.section`
+const Wrapper = styled.section`
   position: relative;
+  display: inline-block;
 `
 
 const Figure = styled.figure`
-  margin: ${p => p.theme.spacing.huge} 0;
+  margin: ${({ theme }) => theme.spacing.huge} 0;
   display: flex;
   justify-content: center;
 `
 
 const Figcaption = styled.figcaption`
   position: absolute;
-  top: -1em;
-  left: 0;
+  top: 2rem;
+  left: -1rem;
   word-break: keep-all;
   text-transform: uppercase;
   font-weight: 500;
@@ -28,8 +29,8 @@ const Figcaption = styled.figcaption`
 const Image = styled(Img)`
   object-fit: cover;
   border-radius: 50%;
-  width: 15em;
-  height: 15em;
+  width: 15rem;
+  height: 15rem;
 
   &::after {
     position: absolute;
@@ -51,9 +52,9 @@ const Span = styled.span`
 
 const Button = styled(Link)`
   position: absolute;
-  right: 2em;
-  bottom: 0;
-  background: ${({ color }) => color};
+  right: 0;
+  bottom: 4rem;
+  background: ${({ theme }) => theme.white};
   color: ${({ theme }) => theme.black};
   padding: ${({ theme }) => `${theme.spacing.xsmall} ${theme.spacing.small}`};
   font-family: 'IBM Plex Mono', mono;
@@ -67,8 +68,8 @@ const Button = styled(Link)`
 
 const FloatingCircle = styled.div`
   position: absolute;
-  width: 2em;
-  height: 2em;
+  width: 2rem;
+  height: 2rem;
   top: ${({ y }) => y}rem;
   right: ${({ x }) => x}rem;
   border-radius: 50%;
@@ -77,22 +78,24 @@ const FloatingCircle = styled.div`
 `
 
 const Microscope = ({ image, title, color }) => (
-  <Section>
-    <Figure>
-      <Image sizes={image.sizes} />
-      <Figcaption>
-        re-
-        <Span color={color}>{title}</Span>
-      </Figcaption>
-    </Figure>
-    <Button to={`re-${title}`} color={color}>
-      Explore
-      <Arrow />
-    </Button>
-    <FloatingCircle x={2} y={2} color={color} />
-    <FloatingCircle x={15} y={3} color={color} />
-    <FloatingCircle x={12} y={10} color={color} />
-  </Section>
+  <section>
+    <Wrapper>
+      <Figure>
+        <Image sizes={image.sizes} />
+        <Figcaption>
+          re-
+          <Span color={color}>{title}</Span>
+        </Figcaption>
+      </Figure>
+      <Button to={`re-${title}`}>
+        Explore
+        <Arrow />
+      </Button>
+      <FloatingCircle x={2} y={7} color={color} />
+      <FloatingCircle x={14} y={10} color={color} />
+      <FloatingCircle x={12} y={15} color={color} />
+    </Wrapper>
+  </section>
 )
 
 export default Microscope
