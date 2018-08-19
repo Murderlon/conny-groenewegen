@@ -11,7 +11,7 @@ const StyledFooter = styled.footer`
   div {
     position: relative;
     border-radius: 50%;
-    background: white;
+    background: ${({ theme }) => theme.white};
     padding-left: 7em;
     padding-top: 3em;
     left: -6em;
@@ -19,13 +19,12 @@ const StyledFooter = styled.footer`
     width: 25em;
     height: 25em;
   }
-`
 
-const Nav = styled.nav`
   li {
     margin-bottom: ${({ theme }) => theme.spacing.small};
   }
 `
+
 const Logo = styled(LogoSVG)`
   color: ${p => p.theme.black};
   margin-top: ${({ theme }) => theme.spacing.small};
@@ -44,7 +43,7 @@ const Link = ({ to, children }) => (
 const Footer = () => (
   <StyledFooter>
     <div>
-      <Nav>
+      <nav>
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -65,7 +64,7 @@ const Footer = () => (
             <Link to="/contact">Contact</Link>
           </li>
         </ul>
-      </Nav>
+      </nav>
       <Logo />
     </div>
   </StyledFooter>
