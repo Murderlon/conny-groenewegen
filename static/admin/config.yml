@@ -10,18 +10,32 @@ collections:
     label: Re-Couture
     folder: src/pages/re-couture
     create: true
-    slug: "{{slug}}"
+    slug: '{{slug}}'
     fields:
-      - { label: Template Key, name: templateKey, widget: hidden, default: project-detail }
+      - {
+          label: Template Key,
+          name: templateKey,
+          widget: hidden,
+          default: project-detail,
+        }
+      - label: 'Category'
+        name: 'category'
+        widget: 'select'
+        options: ['collections', 'collaborations', 'exhibitions']
       - { name: title, label: Title }
-      - { 
+      - {
           name: headerImage,
           label: Header image,
           widget: object,
-          fields: [
-            { label: file, name: image, widget: image },
-            { label: alternative text description, name: alt, widget: string }
-          ]
+          fields:
+            [
+              { label: file, name: image, widget: image },
+              {
+                label: alternative text description,
+                name: alt,
+                widget: string,
+              },
+            ],
         }
       - { name: description, label: Project description, widget: text }
       - label: Images
@@ -30,4 +44,3 @@ collections:
         fields:
           - { label: file, name: image, widget: image }
           - { label: alternative text description, name: alt, widget: string }
-            
