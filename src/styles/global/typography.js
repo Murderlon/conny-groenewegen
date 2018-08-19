@@ -44,7 +44,7 @@ const typography = css`
   }
 
   h3 {
-    font-size: ${modularScale(2)};
+    font-size: ${modularScale(1)};
   }
 
   a {
