@@ -1,4 +1,4 @@
-import React from 'React'
+import React from 'react'
 import GatsbyLink from 'gatsby-link'
 import styled from 'styled-components'
 
