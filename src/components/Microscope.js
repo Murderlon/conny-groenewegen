@@ -65,6 +65,17 @@ const Button = styled(Link)`
   }
 `
 
+const FloatingCircle = styled.div`
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  top: ${({ y }) => y}rem;
+  right: ${({ x }) => x}rem;
+  border-radius: 50%;
+  background: ${({ color, theme }) =>
+    `radial-gradient(${theme.white}, ${color})`};
+`
+
 const Microscope = ({ image, title, color }) => (
   <Section>
     <Figure>
@@ -78,6 +89,9 @@ const Microscope = ({ image, title, color }) => (
       Explore
       <Arrow />
     </Button>
+    <FloatingCircle x={2} y={2} color={color} />
+    <FloatingCircle x={15} y={3} color={color} />
+    <FloatingCircle x={12} y={10} color={color} />
   </Section>
 )
 
