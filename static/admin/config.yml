@@ -44,3 +44,38 @@ collections:
         fields:
           - { label: file, name: image, widget: image }
           - { label: alternative text description, name: alt, widget: string }
+
+  - name: re-space
+    label: Re-Space
+    folder: src/pages/re-space
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - {
+          label: Template Key,
+          name: templateKey,
+          widget: hidden,
+          default: project-detail,
+        }
+      - { name: title, label: Title }
+      - {
+          name: headerImage,
+          label: Header image,
+          widget: object,
+          fields:
+            [
+              { label: file, name: image, widget: image },
+              {
+                label: alternative text description,
+                name: alt,
+                widget: string,
+              },
+            ],
+        }
+      - { name: description, label: Project description, widget: text }
+      - label: Images
+        name: images
+        widget: list
+        fields:
+          - { label: file, name: image, widget: image }
+          - { label: alternative text description, name: alt, widget: string }
