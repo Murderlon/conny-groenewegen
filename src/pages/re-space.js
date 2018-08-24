@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import GatbyLink from 'gatsby-link'
 import styled from 'styled-components'
+import { Helmet } from 'react-helmet'
 
 import ArrowIcon from '../icons/arrow.svg'
 
@@ -47,6 +48,9 @@ const ReSpace = ({ data }) => {
 
   return (
     <Fragment>
+      <Helmet>
+        <title>Conny Groenewegen | Re-Space</title>
+      </Helmet>
       <Link to="/">
         <ArrowIcon /> Overview
       </Link>

@@ -3,6 +3,7 @@ import styled, { injectGlobal, ThemeProvider } from 'styled-components'
 
 import LogoSVG from '../icons/logo.svg'
 import Footer from '../components/Footer'
+import HelmetMetaTags from '../components/HelmetMetaTags'
 
 import base from '../styles/global/base'
 import typography from '../styles/global/typography'
@@ -29,6 +30,7 @@ const Header = styled.header`
 const TemplateWrapper = ({ children }) => (
   <ThemeProvider theme={{ ...colors, ...variables }}>
     <Fragment>
+      <HelmetMetaTags />
       <Header>
         <Logo />
       </Header>
