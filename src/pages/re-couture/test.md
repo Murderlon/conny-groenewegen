@@ -1,6 +1,7 @@
 ---
 templateKey: project-detail
-title: Test
+category: collaborations
+title: We are muze
 headerImage:
   alt: future retro
   image: /assets/future-retro.jpg
