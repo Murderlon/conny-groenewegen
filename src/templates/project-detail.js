@@ -20,7 +20,6 @@ export default function Template({ data }) {
     description,
     images
   } = data.markdownRemark.frontmatter
-  console.log(images)
 
   return (
     <main>
