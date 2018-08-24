@@ -21,12 +21,8 @@ const VideoWrapper = styled.div`
 const MaskedVideo = ({ src }) => (
   <VideoWrapper>
     <div>
-      <video autoPlay loop>
+      <video autoPlay loop playsinline muted>
         <source src={src} type="video/mp4" />
-        <p>
-          Your browser does not support HTML5 video. Here is a{' '}
-          <a href={src}>link to the video</a> instead.
-        </p>
       </video>
     </div>
   </VideoWrapper>
