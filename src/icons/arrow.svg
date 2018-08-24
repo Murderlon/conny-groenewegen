@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="11" viewBox="0 0 19 11">
-  <g fill="none" fill-rule="evenodd" stroke="#110B11" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" transform="translate(1 1)">
+  <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" transform="translate(1 1)">
     <polyline points="11.718 .076 16.869 4.197 11.718 8.318"/>
     <path d="M16.4848485,4.12121212 L0,4.12121212"/>
   </g>
