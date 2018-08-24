@@ -102,17 +102,14 @@ export const GatsbyImageFragment = graphql`
 export const query = graphql`
   query images {
     couture: file(relativePath: { eq: "couture-preview.jpg" }) {
-      name
       ...GatsbyImageFragment
     }
 
     space: file(relativePath: { eq: "space-preview.jpg" }) {
-      name
       ...GatsbyImageFragment
     }
 
     materialize: file(relativePath: { eq: "materialize-preview.jpg" }) {
-      name
       ...GatsbyImageFragment
     }
   }
