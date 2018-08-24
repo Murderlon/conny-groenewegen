@@ -21,7 +21,7 @@ const VideoWrapper = styled.div`
 const MaskedVideo = ({ src }) => (
   <VideoWrapper>
     <div>
-      <video autoPlay loop playsinline muted>
+      <video autoPlay loop playsInline muted>
         <source src={src} type="video/mp4" />
       </video>
     </div>
