@@ -42,6 +42,7 @@ const CategoryHeader = ({ title, color }) => {
         re-
         <span>{title}</span>
       </Heading>
+      <p>[needs explanation]</p>
     </Fragment>
   )
 }
