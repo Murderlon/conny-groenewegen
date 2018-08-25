@@ -15,6 +15,7 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
+    "dlv": "^1.1.2",
     "gatsby": "^1.9.277",
     "gatsby-image": "^1.0.54",
     "gatsby-link": "^1.6.40",
