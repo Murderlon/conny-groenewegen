@@ -1,5 +1,6 @@
 import React, { Fragment, Component } from 'react'
 import styled, { withTheme } from 'styled-components'
+import { Parallax } from 'react-scroll-parallax'
 
 import Microscope from '../components/Microscope'
 import Button from '../components/Button'
@@ -57,10 +58,12 @@ class Index extends Component {
 
         <Article>
           <h2>Collectives</h2>
-          <p>Some text here probably</p>
+          <p>[needs explanation]</p>
           <LayoutWrapper>
             <Section>
-              <MaskedVideo src={fama} />
+              <Parallax offsetYMax={25} offsetYMin={-25} slowerScrollRate>
+                <MaskedVideo src={fama} />
+              </Parallax>
               <div>
                 <h3>FaMa</h3>
                 <p>
@@ -72,7 +75,9 @@ class Index extends Component {
               </div>
             </Section>
             <Section>
-              <MaskedVideo src={electricco} />
+              <Parallax offsetYMax={25} offsetYMin={-25} slowerScrollRate>
+                <MaskedVideo src={electricco} />
+              </Parallax>
               <div>
                 <h3>Electric Co.</h3>
                 <p>
