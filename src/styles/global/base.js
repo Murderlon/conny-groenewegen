@@ -1,5 +1,5 @@
 import { css } from 'styled-components'
-import { black, white } from '../themes/colors'
+import { black, white, grey } from '../themes/colors'
 
 const base = css`
   html {
@@ -56,6 +56,10 @@ const base = css`
   a {
     text-decoration: none;
     color: inherit;
+  }
+
+  p {
+    color: ${grey};
   }
 
   button {

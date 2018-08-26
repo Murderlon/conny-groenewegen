@@ -5,6 +5,10 @@ import delve from 'dlv'
 import ProjectCard from '../components/ProjectCard'
 import CategoryHeader from '../components/CategoryHeader'
 
+const Section = styled.section`
+  margin: ${({ theme }) => theme.spacing.xlarge} 0;
+`
+
 const Heading = styled.h2`
   text-transform: capitalize;
 `
@@ -23,14 +27,14 @@ const ReSpace = ({ data }) => {
         {
           return (
             subCategories[cat] && (
-              <section key={cat}>
+              <Section key={cat}>
                 <Heading>{cat}</Heading>
                 {subCategories[cat].map(({ node }) => {
                   return (
                     <ProjectCard node={node} key={node.frontmatter.title} />
                   )
                 })}
-              </section>
+              </Section>
             )
           )
         }
