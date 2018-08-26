@@ -17,5 +17,7 @@ images:
     image: /assets/kandinsky.jpg
   - alt: street
     image: /assets/alena-aenami-7p-m-1k.jpg
+  - alt: bath
+    image: /assets/bathtub1.jpg
 ---
 
