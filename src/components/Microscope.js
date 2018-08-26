@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import { Parallax } from 'react-scroll-parallax'
@@ -67,15 +67,43 @@ const Button = styled(Link)`
   }
 `
 
-const FloatingCircle = styled.div`
-  position: absolute;
-  width: 2rem;
-  height: 2rem;
-  top: ${({ y }) => y}rem;
-  right: ${({ x }) => x}rem;
-  border-radius: 50%;
-  background: ${({ color, theme }) =>
-    `radial-gradient(${theme.white}, ${color})`};
+const float = keyframes`
+  from {
+    transform: rotate(-0.004deg) translate3d(5px, 0, 0) rotate(-0.001deg);
+  }
+
+  to {
+    transform: rotate(360.001deg) translate3d(5px, 0, 0) rotate(-360.001deg);
+  }
+`
+
+const CircleWrapper = styled.div`
+  div {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: ${({ color, theme }) =>
+      `radial-gradient(${theme.white}, ${color})`};
+  }
+
+  div:first-of-type {
+    top: 5rem;
+    right: 14rem;
+    animation: ${float} 10s infinite linear;
+  }
+
+  div:nth-of-type(2) {
+    top: 3rem;
+    right: 3rem;
+    animation: ${float} 14s infinite linear;
+  }
+
+  div:last-of-type {
+    top: 10rem;
+    right: 4rem;
+    animation: ${float} 5s infinite linear;
+  }
 `
 
 const Microscope = ({ image, title, color }) => (
@@ -88,9 +116,11 @@ const Microscope = ({ image, title, color }) => (
         re-
         <Span color={color}>{title}</Span>
       </Figcaption>
-      <FloatingCircle x={2} y={7} color={color} />
-      <FloatingCircle x={14} y={3} color={color} />
-      <FloatingCircle x={12} y={12} color={color} />
+      <CircleWrapper color={color}>
+        <div />
+        <div />
+        <div />
+      </CircleWrapper>
     </Figure>
     <Button to={`re-${title}`}>
       Explore
