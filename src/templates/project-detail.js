@@ -1,16 +1,16 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import styled from 'styled-components'
 
-import Button from '../components/Button'
+import ReturnLink from '../components/ReturnLink'
 
 const ImageGrid = styled.section`
   display: flex;
+  flex-wrap: wrap;
   margin: ${({ theme }) => theme.spacing.large} 0;
 `
 
 const Img = styled.img`
-  flex: 1;
+  flex-basis: 50%;
 `
 
 export default function Template({ data }) {
@@ -23,7 +23,7 @@ export default function Template({ data }) {
 
   return (
     <main>
-      <Link to="/re-couture">Re-Couture</Link>
+      <ReturnLink to="/re-couture">Re-Couture</ReturnLink>
       <h1>{title}</h1>
 
       <img src={headerImage.image} />
@@ -34,10 +34,6 @@ export default function Template({ data }) {
           <Img src={image} alt={alt} key={i} />
         ))}
       </ImageGrid>
-
-      <Button to="" labelText="Previous project">
-        Primary Explores
-      </Button>
     </main>
   )
 }
@@ -45,7 +41,6 @@ export default function Template({ data }) {
 export const pageQuery = graphql`
   query ProjectPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      id
       frontmatter {
         title
         headerImage {
