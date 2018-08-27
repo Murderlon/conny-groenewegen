@@ -7,6 +7,7 @@ import ArrowIcon from '../icons/arrow.svg'
 const Article = styled.article`
   border: 2px solid ${({ theme }) => theme.white};
   border-radius: 3px;
+  margin: ${({ theme }) => theme.spacing.medium} 0;
 
   h2 {
     font-family: 'IBM Plex Mono', mono;
@@ -19,6 +20,15 @@ const Article = styled.article`
     border-bottom: 2px solid ${({ theme }) => theme.white};
     font-size: 1em;
   }
+  div {
+    height: 13em;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 `
 
 const ProjectCard = ({ node }) => {
@@ -29,7 +39,9 @@ const ProjectCard = ({ node }) => {
         <h2>
           {title} <ArrowIcon />
         </h2>
-        <img src={headerImage.image} />
+        <div>
+          <img src={headerImage.image} />
+        </div>
       </GatbyLink>
     </Article>
   )
