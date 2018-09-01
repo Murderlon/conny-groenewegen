@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import Link from 'gatsby-link'
 import styled, { injectGlobal, ThemeProvider } from 'styled-components'
 import { ParallaxProvider } from 'react-scroll-parallax'
 
@@ -34,7 +35,9 @@ const TemplateWrapper = ({ children }) => (
       <Fragment>
         <HelmetMetaTags />
         <Header>
-          <Logo />
+          <Link to="/">
+            <Logo />
+          </Link>
         </Header>
         <Main>{children()}</Main>
         <Footer />
