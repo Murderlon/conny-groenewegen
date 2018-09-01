@@ -8,23 +8,24 @@ import Arrow from '../icons/arrow.svg'
 
 const Wrapper = styled.section`
   margin: ${({ theme }) => theme.spacing.xxlarge} 0;
-  position: relative;
-  display: inline-block;
-`
-
-const Figure = styled.figure`
   display: flex;
   justify-content: center;
 `
 
+const Figure = styled.figure`
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+`
+
 const Figcaption = styled.figcaption`
   position: absolute;
-  top: -1rem;
-  left: 2rem;
+  top: -2rem;
+  left: 0;
   word-break: keep-all;
   text-transform: uppercase;
-  font-weight: 500;
-  font-size: 2.2em;
+  font-weight: 700;
+  font-size: 2.1em;
 `
 
 const Image = styled(Img)`
@@ -53,8 +54,8 @@ const Span = styled.span`
 
 const Button = styled(Link)`
   position: absolute;
-  right: 3rem;
-  bottom: 2rem;
+  right: 1rem;
+  bottom: 0;
   background: ${({ theme }) => theme.white};
   color: ${({ theme }) => theme.black};
   padding: ${({ theme }) => `${theme.spacing.xsmall} ${theme.spacing.small}`};
@@ -121,11 +122,11 @@ const Microscope = ({ image, title, color }) => (
         <div />
         <div />
       </CircleWrapper>
+      <Button to={`re-${title}`}>
+        Explore
+        <Arrow />
+      </Button>
     </Figure>
-    <Button to={`re-${title}`}>
-      Explore
-      <Arrow />
-    </Button>
   </Wrapper>
 )
 

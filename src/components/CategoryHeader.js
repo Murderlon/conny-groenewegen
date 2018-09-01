@@ -6,6 +6,7 @@ import ReturnLink from '../components/ReturnLink'
 
 const Heading = styled.h1`
   text-transform: uppercase;
+  font-weight: 700;
 
   span {
     color: ${({ theme, color }) => theme[color]};
