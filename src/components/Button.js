@@ -6,7 +6,7 @@ const Link = styled(GatsbyLink)`
   padding: ${({ theme }) => `${theme.spacing.small} ${theme.spacing.medium}`};
   border: 1px solid ${({ theme }) => theme.white};
   border-radius: 3px;
-  font-family: 'IBM Plex Mono, mono';
+  font-family: 'IBM Plex Mono', mono;
   text-transform: uppercase;
   display: inline-block;
 `
