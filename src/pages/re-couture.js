@@ -51,6 +51,12 @@ export const ProjectFragment = graphql`
       fields {
         slug
       }
+      childrenImageSharp {
+        sizes(maxWidth: 500) {
+          originalName
+          ...GatsbyImageSharpSizes
+        }
+      }
       frontmatter {
         category
         title

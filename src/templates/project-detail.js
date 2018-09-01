@@ -45,11 +45,7 @@ export const pageQuery = graphql`
       childrenImageSharp {
         sizes(maxWidth: 500) {
           originalName
-          aspectRatio
-          base64
-          sizes
-          src
-          srcSet
+          ...GatsbyImageSharpSizes
         }
       }
       frontmatter {

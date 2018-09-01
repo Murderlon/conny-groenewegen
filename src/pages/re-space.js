@@ -26,6 +26,12 @@ export const pageQuery = graphql`
           fields {
             slug
           }
+          childrenImageSharp {
+            sizes(maxWidth: 500) {
+              originalName
+              ...GatsbyImageSharpSizes
+            }
+          }
           frontmatter {
             title
             headerImage {

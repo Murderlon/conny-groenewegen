@@ -1,5 +1,6 @@
 import React from 'react'
 import GatbyLink from 'gatsby-link'
+import Image from 'gatsby-image'
 import styled from 'styled-components'
 
 import ArrowIcon from '../icons/arrow.svg'
@@ -33,6 +34,9 @@ const Article = styled.article`
 
 const ProjectCard = ({ node }) => {
   const { title, headerImage } = node.frontmatter
+  const headerGatsbyImage = node.childrenImageSharp.find(({ sizes }) =>
+    headerImage.image.includes(sizes.originalName)
+  )
   return (
     <Article>
       <GatbyLink to={node.fields.slug}>
@@ -40,7 +44,7 @@ const ProjectCard = ({ node }) => {
           {title} <ArrowIcon />
         </h2>
         <div>
-          <img src={headerImage.image} />
+          <Image sizes={headerGatsbyImage.sizes} />
         </div>
       </GatbyLink>
     </Article>
