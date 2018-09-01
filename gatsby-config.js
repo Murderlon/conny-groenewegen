@@ -7,8 +7,15 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/pages/`,
-        name: 'pages'
+        name: 'static/assets',
+        path: `${__dirname}/static/assets/`
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'pages',
+        path: `${__dirname}/src/pages/`
       }
     },
     {

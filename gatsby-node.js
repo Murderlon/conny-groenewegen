@@ -45,8 +45,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   })
 }
 
-exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-  const { createNodeField } = boundActionCreators
+exports.onCreateNode = ({ node, boundActionCreators, getNode, getNodes }) => {
+  const { createNodeField, createParentChildLink } = boundActionCreators
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
@@ -55,5 +55,37 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
       node,
       value
     })
+    // Attach image's ImageSharp node by public path if necessary
+    if (node.frontmatter.headerImage.image) {
+      createImageNodeFromPath(node.frontmatter.headerImage.image)
+    }
+    if (node.frontmatter.images.length > 0) {
+      node.frontmatter.images.map(({ image }) => createImageNodeFromPath(image))
+    }
+  }
+
+  function createImageNodeFromPath(relPath) {
+    // Find absolute path of linked path
+    const pathToFile = path
+      .join(__dirname, 'static', relPath)
+      .split(path.sep)
+      .join('/')
+
+    // Find ID of File node
+    const fileImageNode = getNodes().find(n => n.absolutePath === pathToFile)
+
+    if (fileImageNode != null) {
+      // Find ImageSharp node corresponding to the File node
+      const imageSharpNodeId = fileImageNode.children.find(n =>
+        n.endsWith('>> ImageSharp')
+      )
+      const imageSharpNode = getNodes().find(n => n.id === imageSharpNodeId)
+
+      // Add ImageSharp node as child
+      createParentChildLink({
+        parent: node,
+        child: imageSharpNode
+      })
+    }
   }
 }
