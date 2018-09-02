@@ -1,12 +1,20 @@
 import React, { Fragment } from 'react'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
-import { transparentize } from 'polished'
 
 import CategoryHeader from '../components/CategoryHeader'
 
 const Image = styled(Img)`
   z-index: -1;
+`
+
+const Article = styled.article`
+  div:nth-child(2) > div:nth-of-type(2),
+  div:nth-child(6) > div:nth-of-type(2),
+  div:nth-child(8) > div:nth-of-type(2) {
+    border: 2px solid ${p => p.theme.black};
+    color: ${p => p.theme.black};
+  }
 `
 
 const Wrapper = styled.div`
@@ -22,7 +30,7 @@ const Element = styled.div`
   top: 1em;
   left: 1em;
   border: 2px solid ${p => p.theme.white};
-  background: ${p => transparentize(0.6, p.theme.black)};
+  color: ${p => p.theme.white};
   padding: ${p => p.theme.spacing.small};
   width: 7em;
 
@@ -71,19 +79,21 @@ const ReMaterialize = ({ data }) => {
         the density of the wool in regards to the cotton or silk yarn. This make
         the fabrics go freaky and bubbly and make you want to touch it.
       </CategoryHeader>
-      {Object.keys(data).map((key, i) => {
-        return (
-          <Wrapper key={key}>
-            <Image sizes={data[key].childImageSharp.sizes} />
-            <Element>
-              <span>0{i + 1}</span>
-              <span>{key.substring(0, 2)}</span>
-              <h2>{key}</h2>
-            </Element>
-            <p>{content[key]}</p>
-          </Wrapper>
-        )
-      })}
+      <Article>
+        {Object.keys(data).map((key, i) => {
+          return (
+            <Wrapper key={key}>
+              <Image sizes={data[key].childImageSharp.sizes} />
+              <Element index={i}>
+                <span>0{i + 1}</span>
+                <span>{key.substring(0, 2)}</span>
+                <h2>{key}</h2>
+              </Element>
+              <p>{content[key]}</p>
+            </Wrapper>
+          )
+        })}
+      </Article>
     </Fragment>
   )
 }
