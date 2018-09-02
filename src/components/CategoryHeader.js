@@ -13,7 +13,7 @@ const Heading = styled.h1`
   }
 `
 
-const CategoryHeader = ({ title, color }) => {
+const CategoryHeader = ({ title, color, children }) => {
   return (
     <Fragment>
       <Helmet>
@@ -27,13 +27,7 @@ const CategoryHeader = ({ title, color }) => {
         re-
         <span>{title}</span>
       </Heading>
-      <p>
-        {' '}
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-      </p>
+      <p>{children}</p>
     </Fragment>
   )
 }
