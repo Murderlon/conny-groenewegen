@@ -18,15 +18,21 @@ injectGlobal`
 `
 
 const Main = styled.main`
-  margin: ${p => p.theme.spacing.medium};
+  margin: 0 auto;
+  padding: ${p => p.theme.spacing.medium};
+  max-width: 50em;
 `
 const Logo = styled(LogoSVG)`
   color: ${p => p.theme.white};
 `
 const Header = styled.header`
   margin: ${p => p.theme.spacing.xlarge} 0;
-  display: flex;
-  justify-content: center;
+  padding: 0 ${p => p.theme.spacing.xlarge};
+
+  @media (max-width: 40em) {
+    display: flex;
+    justify-content: center;
+  }
 `
 
 const TemplateWrapper = ({ children }) => (

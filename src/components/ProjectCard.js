@@ -9,6 +9,8 @@ const Article = styled.article`
   border: 2px solid ${({ theme }) => theme.white};
   border-radius: 3px;
   margin: ${({ theme }) => theme.spacing.medium} 0;
+  min-width: 20em;
+  flex: 0 1 47%;
 
   h2 {
     font-family: 'IBM Plex Mono', mono;
@@ -22,7 +24,7 @@ const Article = styled.article`
     font-size: 1em;
   }
   div {
-    height: 13em;
+    height: 15em;
 
     img {
       width: 100%;

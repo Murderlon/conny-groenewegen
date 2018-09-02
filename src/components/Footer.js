@@ -12,7 +12,7 @@ const StyledFooter = styled.footer`
     position: relative;
     border-radius: 50%;
     background: ${({ theme }) => theme.white};
-    padding-left: 7em;
+    padding-left: 8em;
     padding-top: 3em;
     left: -6em;
     bottom: -3em;

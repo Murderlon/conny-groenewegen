@@ -22,14 +22,20 @@ const LayoutWrapper = styled.div`
 `
 
 const MicroscopeWrapper = styled.div`
+  min-height: 80vh;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-content: center;
   max-width: 65em;
 
   @media (min-width: 42em) {
     justify-content: space-between;
+
+    section:first-child {
+      flex-basis: 100%;
+    }
   }
 `
 

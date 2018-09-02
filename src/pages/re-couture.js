@@ -13,6 +13,12 @@ const Heading = styled.h2`
   text-transform: capitalize;
 `
 
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+`
+
 const ReSpace = ({ data }) => {
   const subCategories = {
     collections: delve(data.collections, 'edges'),
@@ -29,11 +35,13 @@ const ReSpace = ({ data }) => {
             subCategories[cat] && (
               <Section key={cat}>
                 <Heading>{cat}</Heading>
-                {subCategories[cat].map(({ node }) => {
-                  return (
-                    <ProjectCard node={node} key={node.frontmatter.title} />
-                  )
-                })}
+                <Wrapper>
+                  {subCategories[cat].map(({ node }) => {
+                    return (
+                      <ProjectCard node={node} key={node.frontmatter.title} />
+                    )
+                  })}
+                </Wrapper>
               </Section>
             )
           )
