@@ -43,7 +43,7 @@ export const pageQuery = graphql`
   query ProjectPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       childrenImageSharp {
-        sizes(maxWidth: 500) {
+        sizes(maxWidth: 1000) {
           originalName
           ...GatsbyImageSharpSizes
         }
