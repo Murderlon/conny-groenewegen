@@ -1,7 +1,14 @@
 import React, { Fragment } from 'react'
+import styled from 'styled-components'
 
 import ProjectCard from '../components/ProjectCard'
 import CategoryHeader from '../components/CategoryHeader'
+
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+`
 
 const ReSpace = ({ data }) => {
   const projects = data.allMarkdownRemark.edges
@@ -9,9 +16,11 @@ const ReSpace = ({ data }) => {
   return (
     <Fragment>
       <CategoryHeader title="Space" color="blue" />
-      {projects.map(({ node }) => (
-        <ProjectCard node={node} key={node.frontmatter.title} />
-      ))}
+      <Wrapper>
+        {projects.map(({ node }) => (
+          <ProjectCard node={node} key={node.frontmatter.title} />
+        ))}
+      </Wrapper>
     </Fragment>
   )
 }
