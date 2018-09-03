@@ -1,8 +1,6 @@
 backend:
-  name: git-gateway
-  accept_roles:
-    - Admin
-    - Developer
+  name: github
+  repo: Murderlon/conny-groenewegen
 
 media_folder: static/assets
 public_folder: assets
