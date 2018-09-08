@@ -98,7 +98,6 @@ class Index extends Component {
           nextActiveIndex = categories.indexOf(cat)
         }
       })
-      console.log(nextActiveIndex)
       if (nextActiveIndex === 0) {
         nextState = {
           active: { category: target.value, color: this.colors[target.value] },
@@ -108,7 +107,6 @@ class Index extends Component {
             categories[nextActiveIndex + 2]
           ]
         }
-        console.log(nextState)
       } else {
         nextState = {
           active: { category: target.value, color: this.colors[target.value] },
@@ -118,7 +116,6 @@ class Index extends Component {
             categories[nextActiveIndex - 1]
           ]
         }
-        console.log(nextState)
       }
       return this.setState(nextState)
     }
