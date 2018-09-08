@@ -1,6 +1,6 @@
 import React, { Fragment, Component } from 'react'
 import styled, { withTheme } from 'styled-components'
-import posed from 'react-pose'
+import posed, { PoseGroup } from 'react-pose'
 
 import Microscope from '../components/Microscope/Microscope'
 import Button from '../components/Button'
@@ -8,7 +8,6 @@ import MaskedVideo from '../components/MaskedVideo'
 
 import fama from '../images/fama.mp4'
 import electricco from '../images/electricco.mp4'
-import { PoseGroup } from 'react-pose'
 
 const Article = styled.article`
   margin: 0 auto;
@@ -55,7 +54,20 @@ const ControlsForm = styled.form`
   }
 `
 
-const Label = posed.label()
+const Label = posed.label({
+  flip: {
+    scale: 1,
+    transition: {
+      scale: {
+        type: 'spring',
+        velocity: 3
+      },
+      default: {
+        type: 'spring'
+      }
+    }
+  }
+})
 
 class Index extends Component {
   constructor(props) {
@@ -65,21 +77,50 @@ class Index extends Component {
       couture: this.props.theme.green,
       materialize: this.props.theme.red
     }
-    this.categories = [
-      { label: 'Space', name: 'category', value: 'space' },
-      { label: 'Couture', name: 'category', value: 'couture' },
-      { label: 'Materialize', name: 'category', value: 'materialize' }
-    ]
     this.state = {
+      categories: [
+        { label: 'Space', name: 'category', value: 'space' },
+        { label: 'Couture', name: 'category', value: 'couture' },
+        { label: 'Materialize', name: 'category', value: 'materialize' }
+      ],
       active: { category: 'couture', color: this.props.theme.green }
     }
   }
 
   handleCategoryChange = ({ target }) => {
     if (target.value !== this.state.active.category) {
-      return this.setState({
-        active: { category: target.value, color: this.colors[target.value] }
+      let nextActiveIndex
+      let nextState
+      const { categories } = this.state
+
+      categories.forEach(cat => {
+        if (cat.value === target.value) {
+          nextActiveIndex = categories.indexOf(cat)
+        }
       })
+      console.log(nextActiveIndex)
+      if (nextActiveIndex === 0) {
+        nextState = {
+          active: { category: target.value, color: this.colors[target.value] },
+          categories: [
+            categories[nextActiveIndex + 1],
+            categories[nextActiveIndex],
+            categories[nextActiveIndex + 2]
+          ]
+        }
+        console.log(nextState)
+      } else {
+        nextState = {
+          active: { category: target.value, color: this.colors[target.value] },
+          categories: [
+            categories[nextActiveIndex - 2],
+            categories[nextActiveIndex],
+            categories[nextActiveIndex - 1]
+          ]
+        }
+        console.log(nextState)
+      }
+      return this.setState(nextState)
     }
   }
 
@@ -97,9 +138,9 @@ class Index extends Component {
           >
             <ControlsForm>
               <PoseGroup>
-                {this.categories.map(({ label, name, value }) => {
+                {this.state.categories.map(({ label, name, value }) => {
                   return (
-                    <Label isActive={category === value} key={value}>
+                    <Label key={value}>
                       {label}
                       <input
                         type="radio"
