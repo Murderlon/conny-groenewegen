@@ -82,11 +82,11 @@ export const Button = styled(Link)`
 
 const float = keyframes`
   from {
-    transform: rotate(-0.004deg) translate3d(5px, 0, 0) rotate(-0.001deg);
+    transform: rotate(-0.004deg) translate3d(8px, 0, 0) rotate(-0.001deg);
   }
 
   to {
-    transform: rotate(360.001deg) translate3d(5px, 0, 0) rotate(-360.001deg);
+    transform: rotate(360.001deg) translate3d(8px, 0, 0) rotate(-360.001deg);
   }
 `
 
