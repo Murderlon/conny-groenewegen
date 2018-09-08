@@ -70,6 +70,7 @@ const base = css`
     line-height: inherit;
     background: none;
     border: 0;
+    color: inherit;
   }
 `
 

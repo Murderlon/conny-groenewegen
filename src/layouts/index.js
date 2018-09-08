@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import Link from 'gatsby-link'
 import styled, { injectGlobal, ThemeProvider } from 'styled-components'
-import { ParallaxProvider } from 'react-scroll-parallax'
 
 import LogoSVG from '../icons/logo.svg'
 import Footer from '../components/Footer'
@@ -37,18 +36,16 @@ const Header = styled.header`
 
 const TemplateWrapper = ({ children }) => (
   <ThemeProvider theme={{ ...colors, ...variables }}>
-    <ParallaxProvider>
-      <Fragment>
-        <HelmetMetaTags />
-        <Header>
-          <Link to="/">
-            <Logo />
-          </Link>
-        </Header>
-        <Main>{children()}</Main>
-        <Footer />
-      </Fragment>
-    </ParallaxProvider>
+    <Fragment>
+      <HelmetMetaTags />
+      <Header>
+        <Link to="/">
+          <Logo />
+        </Link>
+      </Header>
+      <Main>{children()}</Main>
+      <Footer />
+    </Fragment>
   </ThemeProvider>
 )
 

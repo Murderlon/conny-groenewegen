@@ -1,38 +1,50 @@
-import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
-import { Parallax } from 'react-scroll-parallax'
 
-import Arrow from '../icons/arrow.svg'
-
-const Wrapper = styled.section`
+export const Wrapper = styled.section`
   margin: ${({ theme }) => theme.spacing.xxlarge} 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 `
 
-const Figure = styled.figure`
+export const Figure = styled.figure`
   position: relative;
   display: inline-block;
   margin: 0 auto;
 `
 
-const Figcaption = styled.figcaption`
+export const Figcaption = styled.figcaption`
   position: absolute;
   top: -2rem;
   left: 0;
   word-break: keep-all;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 2.1em;
+  font-size: 1.8em;
+
+  @media (min-width: 40em) {
+    font-size: 2.3em;
+  }
+
+  > div {
+    word-break: keep-all;
+
+    color: ${({ color }) => color};
+  }
 `
 
-const Image = styled(Img)`
+export const Image = styled(Img)`
   object-fit: cover;
   border-radius: 50%;
-  width: 15rem;
-  height: 15rem;
+  width: 16rem;
+  height: 16rem;
+
+  @media (min-width: 40em) {
+    width: 20rem;
+    height: 20rem;
+  }
 
   &::after {
     position: absolute;
@@ -48,15 +60,15 @@ const Image = styled(Img)`
   }
 `
 
-const Span = styled.span`
+export const Span = styled.span`
   color: ${({ color }) => color};
 `
 
-const Button = styled(Link)`
+export const Button = styled(Link)`
   position: absolute;
   right: 1rem;
   bottom: 0;
-  background: ${({ theme }) => theme.white};
+  background: ${({ color }) => color};
   color: ${({ theme }) => theme.black};
   padding: ${({ theme }) => `${theme.spacing.xsmall} ${theme.spacing.small}`};
   font-family: 'IBM Plex Mono', mono;
@@ -78,56 +90,47 @@ const float = keyframes`
   }
 `
 
-const CircleWrapper = styled.div`
+export const CircleWrapper = styled.div`
   div {
     position: absolute;
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    background: ${({ color, theme }) =>
-      `radial-gradient(${theme.white}, ${color})`};
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    box-shadow: 0 0 10px ${({ theme }) => theme.black},
+      0 0 5px ${({ theme }) => theme.black};
+    opacity: 0.8;
+
+    @media (min-width: 40em) {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
   }
 
   div:first-of-type {
     top: 5rem;
     right: 14rem;
     animation: ${float} 10s infinite linear;
+
+    @media (min-width: 40em) {
+      right: 17rem;
+    }
   }
 
   div:nth-of-type(2) {
     top: 3rem;
-    right: 3rem;
+    right: 0;
     animation: ${float} 14s infinite linear;
   }
 
   div:last-of-type {
-    top: 10rem;
-    right: 4rem;
+    top: 13rem;
+    right: 12rem;
     animation: ${float} 5s infinite linear;
+
+    @media (min-width: 40em) {
+      top: 17rem;
+      right: 14rem;
+    }
   }
 `
-
-const Microscope = ({ image, title, color }) => (
-  <Wrapper>
-    <Figure>
-      <Parallax offsetYMax={15} offsetYMin={-15} slowerScrollRate>
-        <Image sizes={image.sizes} />
-      </Parallax>
-      <Figcaption>
-        re-
-        <Span color={color}>{title}</Span>
-      </Figcaption>
-      <CircleWrapper color={color}>
-        <div />
-        <div />
-        <div />
-      </CircleWrapper>
-      <Button to={`re-${title}`}>
-        Explore
-        <Arrow />
-      </Button>
-    </Figure>
-  </Wrapper>
-)
-
-export default Microscope

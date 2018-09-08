@@ -1,13 +1,14 @@
 import React, { Fragment, Component } from 'react'
 import styled, { withTheme } from 'styled-components'
-import { Parallax } from 'react-scroll-parallax'
+import posed from 'react-pose'
 
-import Microscope from '../components/Microscope'
+import Microscope from '../components/Microscope/Microscope'
 import Button from '../components/Button'
 import MaskedVideo from '../components/MaskedVideo'
 
 import fama from '../images/fama.mp4'
 import electricco from '../images/electricco.mp4'
+import { PoseGroup } from 'react-pose'
 
 const Article = styled.article`
   margin: 0 auto;
@@ -29,14 +30,6 @@ const MicroscopeWrapper = styled.div`
   flex-wrap: wrap;
   align-content: center;
   max-width: 65em;
-
-  @media (min-width: 42em) {
-    justify-content: space-between;
-
-    section:first-child {
-      flex-basis: 100%;
-    }
-  }
 `
 
 const Section = styled.section`
@@ -45,27 +38,82 @@ const Section = styled.section`
   margin: ${({ theme }) => theme.spacing.xlarge} 0;
 `
 
+const ControlsForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  margin-top: ${({ theme }) => theme.spacing.medium};
+  text-transform: uppercase;
+  font-family: 'IBM Plex Mono', mono;
+
+  input[type='radio'] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  label {
+    margin: ${({ theme }) => theme.spacing.small};
+  }
+`
+
+const Label = posed.label()
+
 class Index extends Component {
-  render() {
-    const { data, theme } = this.props
-    const categories = {
-      couture: theme.green,
-      space: theme.blue,
-      materialize: theme.red
+  constructor(props) {
+    super(props)
+    this.colors = {
+      space: this.props.theme.blue,
+      couture: this.props.theme.green,
+      materialize: this.props.theme.red
     }
+    this.categories = [
+      { label: 'Space', name: 'category', value: 'space' },
+      { label: 'Couture', name: 'category', value: 'couture' },
+      { label: 'Materialize', name: 'category', value: 'materialize' }
+    ]
+    this.state = {
+      active: { category: 'couture', color: this.props.theme.green }
+    }
+  }
+
+  handleCategoryChange = ({ target }) => {
+    if (target.value !== this.state.active.category) {
+      return this.setState({
+        active: { category: target.value, color: this.colors[target.value] }
+      })
+    }
+  }
+
+  render() {
+    const { data } = this.props
+    const { category, color } = this.state.active
     return (
       <Fragment>
         <MicroscopeWrapper>
-          {Object.keys(categories).map(name => {
-            return (
-              <Microscope
-                image={data[name].childImageSharp}
-                color={categories[name]}
-                title={name}
-                key={name}
-              />
-            )
-          })}
+          <Microscope
+            image={data[category].childImageSharp}
+            color={color}
+            activeCategory={category}
+            onChange={this.handleCategoryChange}
+          >
+            <ControlsForm>
+              <PoseGroup>
+                {this.categories.map(({ label, name, value }) => {
+                  return (
+                    <Label isActive={category === value} key={value}>
+                      {label}
+                      <input
+                        type="radio"
+                        name={name}
+                        value={value}
+                        checked={category === value && category}
+                        onChange={this.handleCategoryChange}
+                      />
+                    </Label>
+                  )
+                })}
+              </PoseGroup>
+            </ControlsForm>
+          </Microscope>
         </MicroscopeWrapper>
 
         <Article>
@@ -73,9 +121,7 @@ class Index extends Component {
           <p>[needs explanation]</p>
           <LayoutWrapper>
             <Section>
-              <Parallax offsetYMax={25} offsetYMin={-25} slowerScrollRate>
-                <MaskedVideo src={fama} />
-              </Parallax>
+              <MaskedVideo src={fama} />
               <div>
                 <h3>FaMa</h3>
                 <p>
@@ -87,9 +133,7 @@ class Index extends Component {
               </div>
             </Section>
             <Section>
-              <Parallax offsetYMax={25} offsetYMin={-25} slowerScrollRate>
-                <MaskedVideo src={electricco} />
-              </Parallax>
+              <MaskedVideo src={electricco} />
               <div>
                 <h3>Electric Co.</h3>
                 <p>
