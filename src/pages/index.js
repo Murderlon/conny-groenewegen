@@ -1,6 +1,5 @@
 import React, { Fragment, Component } from 'react'
 import styled, { withTheme } from 'styled-components'
-import posed, { PoseGroup } from 'react-pose'
 
 import Microscope from '../components/Microscope/Microscope'
 import Button from '../components/Button'
@@ -36,38 +35,6 @@ const Section = styled.section`
   max-width: 30em;
   margin: ${({ theme }) => theme.spacing.xlarge} 0;
 `
-
-const ControlsForm = styled.form`
-  display: flex;
-  flex-direction: column;
-  margin-top: ${({ theme }) => theme.spacing.medium};
-  text-transform: uppercase;
-  font-family: 'IBM Plex Mono', mono;
-
-  input[type='radio'] {
-    position: absolute;
-    clip: rect(0, 0, 0, 0);
-  }
-
-  label {
-    margin: ${({ theme }) => theme.spacing.small};
-  }
-`
-
-const Label = posed.label({
-  flip: {
-    scale: 1,
-    transition: {
-      scale: {
-        type: 'spring',
-        velocity: 3
-      },
-      default: {
-        type: 'spring'
-      }
-    }
-  }
-})
 
 class Index extends Component {
   constructor(props) {
@@ -130,28 +97,10 @@ class Index extends Component {
           <Microscope
             image={data[category].childImageSharp}
             color={color}
+            categories={this.state.categories}
             activeCategory={category}
             onChange={this.handleCategoryChange}
-          >
-            <ControlsForm>
-              <PoseGroup>
-                {this.state.categories.map(({ label, name, value }) => {
-                  return (
-                    <Label key={value}>
-                      {label}
-                      <input
-                        type="radio"
-                        name={name}
-                        value={value}
-                        checked={category === value && category}
-                        onChange={this.handleCategoryChange}
-                      />
-                    </Label>
-                  )
-                })}
-              </PoseGroup>
-            </ControlsForm>
-          </Microscope>
+          />
         </MicroscopeWrapper>
 
         <Article>

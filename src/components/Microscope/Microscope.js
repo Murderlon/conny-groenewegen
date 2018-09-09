@@ -1,34 +1,57 @@
 import React from 'react'
-import SplitText from 'react-pose-text'
+import posed, { PoseGroup } from 'react-pose'
 
 import Arrow from '../../icons/arrow.svg'
 import {
   Wrapper,
   Figure,
   Image,
-  Figcaption,
   CircleWrapper,
+  ControlsForm,
   Button
 } from './Mircoscope.style'
 
-const charPoses = {
-  exit: { opacity: 0, y: 20 },
-  enter: {
-    opacity: 1,
-    y: 0
+const Div = posed.div({
+  flip: {
+    scale: 1,
+    transition: {
+      scale: {
+        type: 'spring',
+        velocity: 3
+      },
+      default: {
+        type: 'spring'
+      }
+    }
   }
-}
+})
 
-const Microscope = ({ image, activeCategory, color, children }) => (
+const Microscope = ({ image, categories, activeCategory, color, onChange }) => (
   <Wrapper>
     <Figure>
       <Image sizes={image.sizes} />
-      <Figcaption color={color}>
-        re-
-        <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
-          {activeCategory}
-        </SplitText>
-      </Figcaption>
+      <ControlsForm color={color}>
+        <span>RE-</span>
+        <div>
+          <PoseGroup>
+            {categories.map(({ label, name, value }) => {
+              return (
+                <Div key={value}>
+                  <input
+                    id={value}
+                    type="radio"
+                    name={name}
+                    value={value}
+                    checked={activeCategory === value && activeCategory}
+                    onChange={onChange}
+                  />
+                  <label htmlFor={value}>{label}</label>
+                </Div>
+              )
+            })}
+          </PoseGroup>
+        </div>
+      </ControlsForm>
       <CircleWrapper color={color}>
         <div />
         <div />
@@ -39,7 +62,6 @@ const Microscope = ({ image, activeCategory, color, children }) => (
         <Arrow />
       </Button>
     </Figure>
-    {children}
   </Wrapper>
 )
 

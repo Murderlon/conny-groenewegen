@@ -15,26 +15,6 @@ export const Figure = styled.figure`
   margin: 0 auto;
 `
 
-export const Figcaption = styled.figcaption`
-  position: absolute;
-  top: -2rem;
-  left: 0;
-  word-break: keep-all;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1.8em;
-
-  @media (min-width: 40em) {
-    font-size: 2.3em;
-  }
-
-  > div {
-    word-break: keep-all;
-
-    color: ${({ color }) => color};
-  }
-`
-
 export const Image = styled(Img)`
   object-fit: cover;
   border-radius: 50%;
@@ -131,6 +111,49 @@ export const CircleWrapper = styled.div`
     @media (min-width: 40em) {
       top: 17rem;
       right: 14rem;
+    }
+  }
+`
+
+export const ControlsForm = styled.form`
+  position: absolute;
+  top: -8rem;
+  left: -4rem;
+  display: flex;
+  margin-top: ${({ theme }) => theme.spacing.medium};
+  text-transform: uppercase;
+  font-family: 'IBM Plex Mono', mono;
+
+  span {
+    font-size: 2.3em;
+    font-weight: 700;
+    align-self: center;
+  }
+
+  input[type='radio'] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+
+    div {
+      margin: ${({ theme }) => theme.spacing.medium};
+      display: flex;
+      flex-direction: column;
+    }
+
+    + label {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.2em;
+    }
+
+    &:checked + label {
+      font-size: 2.3em;
+      font-weight: 700;
+      color: ${({ color }) => color};
+    }
+
+    &:not(:checked) + label {
+      opacity: 0.8;
     }
   }
 `
