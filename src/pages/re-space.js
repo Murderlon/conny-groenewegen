@@ -45,7 +45,7 @@ export const pageQuery = graphql`
             slug
           }
           childrenImageSharp {
-            sizes(maxWidth: 500) {
+            sizes(maxWidth: 1000) {
               originalName
               ...GatsbyImageSharpSizes
             }

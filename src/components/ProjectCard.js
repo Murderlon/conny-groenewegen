@@ -9,8 +9,11 @@ const Article = styled.article`
   border: 2px solid ${({ theme }) => theme.white};
   border-radius: 3px;
   margin: ${({ theme }) => theme.spacing.medium} 0;
-  min-width: 20em;
-  flex: 0 1 47%;
+  flex: 1 1 100%;
+
+  @media (min-width: 40em) {
+    flex: 0 1 47%;
+  }
 
   h2 {
     font-family: 'IBM Plex Mono', mono;

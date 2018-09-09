@@ -10,7 +10,6 @@ import electricco from '../images/electricco.mp4'
 
 const Article = styled.article`
   margin: 0 auto;
-  display: block;
   max-width: 65em;
 `
 
@@ -32,8 +31,11 @@ const MicroscopeWrapper = styled.div`
 
 const Section = styled.section`
   display: flex;
-  max-width: 30em;
   margin: ${({ theme }) => theme.spacing.xlarge} 0;
+
+  @media (min-width: 50em) {
+    max-width: 25em;
+  }
 `
 
 class Index extends Component {
