@@ -1,6 +1,6 @@
 backend:
-  name: github
-  repo: Murderlon/conny-groenewegen
+  name: git-gateway
+  branch: master
 
 media_folder: static/assets
 public_folder: assets
