@@ -27,7 +27,7 @@ const CategoryHeader = ({ title, color, children }) => {
         re-
         <span>{title}</span>
       </Heading>
-      <p>{children}</p>
+      {children}
     </Fragment>
   )
 }

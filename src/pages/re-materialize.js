@@ -69,15 +69,11 @@ const ReMaterialize = ({ data }) => {
   return (
     <Fragment>
       <CategoryHeader title="materialize" color="red">
-        Developed fabrics for the Primary Explorers Collection. The fabrics are
-        6gg loose knitted open structures with mixed wool/ angora and silk or
-        cotton yarn. Afterwards the open lightweight knits are stuck on a
-        delicate skin of fine woven and firmly compressed with a hot washing.
-        The organza, satin or chiffon silk fabric is sticking to the shrunk knit
-        like a wrinkled skin. Because of a pattern of various concentrations of
-        wool, the knit starts to shrink in different proportions according to
-        the density of the wool in regards to the cotton or silk yarn. This make
-        the fabrics go freaky and bubbly and make you want to touch it.
+        <p>
+          My research traces back to the origins of methods. Peeling off tired
+          layers of self-evidence to find a sparkle of unexpected material
+          behaviour announcing new potentials for future archetypes.
+        </p>
       </CategoryHeader>
       <Article>
         {Object.keys(data).map((key, i) => {

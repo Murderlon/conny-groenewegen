@@ -28,7 +28,15 @@ const ReSpace = ({ data }) => {
 
   return (
     <Fragment>
-      <CategoryHeader title="Couture" color="green" />
+      <CategoryHeader title="Couture" color="green">
+        <p>
+          The fibers and threads I use reassemble the narrative to reach a point
+          where the material starts to create a path that follows its own rules.
+          A path travelling beyond guidance, storytelling and the cliché,
+          supported by the chant of the digital knitting machine and the
+          repetitive rhythm of classic hand sewing.
+        </p>
+      </CategoryHeader>
       {Object.keys(subCategories).map(cat => {
         {
           return (
