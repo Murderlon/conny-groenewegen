@@ -1,8 +1,7 @@
 import React, { Fragment, Component } from 'react'
 import styled, { withTheme } from 'styled-components'
-import { Parallax } from 'react-scroll-parallax'
 
-import Microscope from '../components/Microscope'
+import Microscope from '../components/Microscope/Microscope'
 import Button from '../components/Button'
 import MaskedVideo from '../components/MaskedVideo'
 
@@ -11,7 +10,6 @@ import electricco from '../images/electricco.mp4'
 
 const Article = styled.article`
   margin: 0 auto;
-  display: block;
   max-width: 65em;
 `
 
@@ -29,43 +27,82 @@ const MicroscopeWrapper = styled.div`
   flex-wrap: wrap;
   align-content: center;
   max-width: 65em;
-
-  @media (min-width: 42em) {
-    justify-content: space-between;
-
-    section:first-child {
-      flex-basis: 100%;
-    }
-  }
 `
 
 const Section = styled.section`
   display: flex;
-  max-width: 30em;
   margin: ${({ theme }) => theme.spacing.xlarge} 0;
+
+  @media (min-width: 50em) {
+    max-width: 25em;
+  }
 `
 
 class Index extends Component {
-  render() {
-    const { data, theme } = this.props
-    const categories = {
-      couture: theme.green,
-      space: theme.blue,
-      materialize: theme.red
+  constructor(props) {
+    super(props)
+    this.colors = {
+      space: this.props.theme.blue,
+      couture: this.props.theme.green,
+      materialize: this.props.theme.red
     }
+    this.state = {
+      categories: [
+        { label: 'Space', name: 'category', value: 'space' },
+        { label: 'Couture', name: 'category', value: 'couture' },
+        { label: 'Materialize', name: 'category', value: 'materialize' }
+      ],
+      active: { category: 'couture', color: this.props.theme.green }
+    }
+  }
+
+  handleCategoryChange = ({ target }) => {
+    if (target.value !== this.state.active.category) {
+      let nextActiveIndex
+      let nextState
+      const { categories } = this.state
+
+      categories.forEach(cat => {
+        if (cat.value === target.value) {
+          nextActiveIndex = categories.indexOf(cat)
+        }
+      })
+      if (nextActiveIndex === 0) {
+        nextState = {
+          active: { category: target.value, color: this.colors[target.value] },
+          categories: [
+            categories[nextActiveIndex + 1],
+            categories[nextActiveIndex],
+            categories[nextActiveIndex + 2]
+          ]
+        }
+      } else {
+        nextState = {
+          active: { category: target.value, color: this.colors[target.value] },
+          categories: [
+            categories[nextActiveIndex - 2],
+            categories[nextActiveIndex],
+            categories[nextActiveIndex - 1]
+          ]
+        }
+      }
+      return this.setState(nextState)
+    }
+  }
+
+  render() {
+    const { data } = this.props
+    const { category, color } = this.state.active
     return (
       <Fragment>
         <MicroscopeWrapper>
-          {Object.keys(categories).map(name => {
-            return (
-              <Microscope
-                image={data[name].childImageSharp}
-                color={categories[name]}
-                title={name}
-                key={name}
-              />
-            )
-          })}
+          <Microscope
+            image={data[category].childImageSharp}
+            color={color}
+            categories={this.state.categories}
+            activeCategory={category}
+            onChange={this.handleCategoryChange}
+          />
         </MicroscopeWrapper>
 
         <Article>
@@ -73,9 +110,7 @@ class Index extends Component {
           <p>[needs explanation]</p>
           <LayoutWrapper>
             <Section>
-              <Parallax offsetYMax={25} offsetYMin={-25} slowerScrollRate>
-                <MaskedVideo src={fama} />
-              </Parallax>
+              <MaskedVideo src={fama} />
               <div>
                 <h3>FaMa</h3>
                 <p>
@@ -87,9 +122,7 @@ class Index extends Component {
               </div>
             </Section>
             <Section>
-              <Parallax offsetYMax={25} offsetYMin={-25} slowerScrollRate>
-                <MaskedVideo src={electricco} />
-              </Parallax>
+              <MaskedVideo src={electricco} />
               <div>
                 <h3>Electric Co.</h3>
                 <p>

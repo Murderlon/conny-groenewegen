@@ -15,7 +15,16 @@ const ReSpace = ({ data }) => {
 
   return (
     <Fragment>
-      <CategoryHeader title="Space" color="blue" />
+      <CategoryHeader title="Space" color="blue">
+        <p>
+          My spatial machines, derived from the age-old artisanal practices of
+          knitting and knotting reload public spaces with purpose and meaning.
+          When put to work, these structures create relationships with the
+          spaces they are placed in and stimulate our creative potential,
+          enabling us to actively reconnect with the new conditions for this
+          environment.
+        </p>
+      </CategoryHeader>
       <Wrapper>
         {projects.map(({ node }) => (
           <ProjectCard node={node} key={node.frontmatter.title} />
@@ -36,7 +45,7 @@ export const pageQuery = graphql`
             slug
           }
           childrenImageSharp {
-            sizes(maxWidth: 500) {
+            sizes(maxWidth: 1000) {
               originalName
               ...GatsbyImageSharpSizes
             }

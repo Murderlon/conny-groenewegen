@@ -16,6 +16,7 @@ const base = css`
     margin: 0;
     background: ${black};
     color: ${white};
+    font-size: 17px;
   }
 
   /**
@@ -70,6 +71,7 @@ const base = css`
     line-height: inherit;
     background: none;
     border: 0;
+    color: inherit;
   }
 `
 

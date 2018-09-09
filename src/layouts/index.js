@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import Link from 'gatsby-link'
 import styled, { injectGlobal, ThemeProvider } from 'styled-components'
-import { ParallaxProvider } from 'react-scroll-parallax'
 
 import LogoSVG from '../icons/logo.svg'
 import Footer from '../components/Footer'
@@ -20,7 +19,7 @@ injectGlobal`
 const Main = styled.main`
   margin: 0 auto;
   padding: ${p => p.theme.spacing.medium};
-  max-width: 50em;
+  max-width: 55em;
 `
 const Logo = styled(LogoSVG)`
   color: ${p => p.theme.white};
@@ -28,27 +27,22 @@ const Logo = styled(LogoSVG)`
 const Header = styled.header`
   margin: ${p => p.theme.spacing.xlarge} 0;
   padding: 0 ${p => p.theme.spacing.xlarge};
-
-  @media (max-width: 40em) {
-    display: flex;
-    justify-content: center;
-  }
+  display: flex;
+  justify-content: center;
 `
 
 const TemplateWrapper = ({ children }) => (
   <ThemeProvider theme={{ ...colors, ...variables }}>
-    <ParallaxProvider>
-      <Fragment>
-        <HelmetMetaTags />
-        <Header>
-          <Link to="/">
-            <Logo />
-          </Link>
-        </Header>
-        <Main>{children()}</Main>
-        <Footer />
-      </Fragment>
-    </ParallaxProvider>
+    <Fragment>
+      <HelmetMetaTags />
+      <Header>
+        <Link to="/">
+          <Logo />
+        </Link>
+      </Header>
+      <Main>{children()}</Main>
+      <Footer />
+    </Fragment>
   </ThemeProvider>
 )
 

@@ -17,6 +17,7 @@ const Label = styled.span`
   color: ${({ theme }) => theme.green};
   font-size: 0.8em;
 `
+const ExternalLink = Link.withComponent('a')
 
 const Button = ({ labelText, children, to }) => {
   const internal = /^\/(?!\/)/.test(to)
@@ -30,7 +31,6 @@ const Button = ({ labelText, children, to }) => {
       </Link>
     )
   }
-  const ExternalLink = Link.withComponent('a')
   return (
     <ExternalLink href={to}>
       {labelText && <Label>{labelText}</Label>}

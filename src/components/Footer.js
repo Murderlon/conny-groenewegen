@@ -16,8 +16,8 @@ const StyledFooter = styled.footer`
     padding-top: 3em;
     left: -6em;
     bottom: -3em;
-    width: 25em;
-    height: 25em;
+    width: 23em;
+    height: 23em;
   }
 
   li {
@@ -59,9 +59,6 @@ const Footer = () => (
           </li>
           <li>
             <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </nav>
