@@ -153,6 +153,7 @@ export const ControlsForm = styled.form`
     }
 
     &:not(:checked) + label {
+      cursor: pointer;
       opacity: 0.8;
     }
   }
