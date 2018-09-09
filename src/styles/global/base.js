@@ -16,6 +16,7 @@ const base = css`
     margin: 0;
     background: ${black};
     color: ${white};
+    font-size: 17px;
   }
 
   /**
