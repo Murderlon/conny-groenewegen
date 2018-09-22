@@ -75,7 +75,7 @@ const About = ({ theme }) => {
           label="instagram"
           labelColor={theme.red}
         >
-          cg@connygroenewegen.nl
+          conny_groenewegen
         </MediaButton>
         <MediaButton
           to="https://www.linkedin.com/in/conny-groenewegen-275ab1a"
@@ -83,7 +83,7 @@ const About = ({ theme }) => {
           label="linkedin"
           labelColor={theme.blue}
         >
-          cg@connygroenewegen.nl
+          conny-groenewegen
         </MediaButton>
       </MediaWrapper>
     </Fragment>

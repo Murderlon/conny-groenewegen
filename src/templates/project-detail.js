@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import Image from 'gatsby-image'
 
@@ -20,7 +20,7 @@ export default function Template({ data }) {
     ({ sizes }) => headerImage.image.includes(sizes.originalName)
   )
   return (
-    <main>
+    <Fragment>
       <ReturnLink to="/re-couture">Re-Couture</ReturnLink>
       <h1>{title}</h1>
 
@@ -35,7 +35,7 @@ export default function Template({ data }) {
             )
         )}
       </ImageGrid>
-    </main>
+    </Fragment>
   )
 }
 
