@@ -2,7 +2,6 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-next',
     'gatsby-plugin-styled-components',
-    'gatsby-plugin-netlify-cms',
     'gatsby-plugin-eslint',
     {
       resolve: 'gatsby-source-filesystem',
@@ -30,6 +29,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-react-svg',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-netlify-cms',
     'gatsby-plugin-netlify' // make sure to keep it last in the array
   ]
 }
