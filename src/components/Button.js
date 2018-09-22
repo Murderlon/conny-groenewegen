@@ -14,7 +14,7 @@ const Link = styled(GatsbyLink)`
 const Label = styled.span`
   text-transform: uppercase;
   font-family: inherit;
-  color: ${({ theme }) => theme.green};
+  color: ${({ theme }) => theme.yellow};
   font-size: 0.8em;
 `
 const ExternalLink = Link.withComponent('a')

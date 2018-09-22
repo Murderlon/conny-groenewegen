@@ -65,23 +65,23 @@ const About = ({ theme }) => {
           to="mailto:cg@connygroenewegen.nl"
           borderColor={theme.white}
           label="e-mail"
-          labelColor={theme.green}
+          labelColor={theme.yellow}
         >
           cg@connygroenewegen.nl
         </MediaButton>
         <MediaButton
           to="https://www.instagram.com/conny_groenewegen/"
-          borderColor={theme.red}
+          borderColor={theme.cyan}
           label="instagram"
-          labelColor={theme.red}
+          labelColor={theme.cyan}
         >
           conny_groenewegen
         </MediaButton>
         <MediaButton
           to="https://www.linkedin.com/in/conny-groenewegen-275ab1a"
-          borderColor={theme.blue}
+          borderColor={theme.magenta}
           label="linkedin"
-          labelColor={theme.blue}
+          labelColor={theme.magenta}
         >
           conny-groenewegen
         </MediaButton>
