@@ -1,7 +1,7 @@
 ---
 templateKey: project-detail
 category: collections
-title: Brozer man gozer
+title: Test case
 headerImage:
   alt: kandinsky
   image: /assets/kandinsky.jpg
