@@ -3,16 +3,11 @@ import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 
 export const Wrapper = styled.section`
+  position: relative;
   margin: ${({ theme }) => theme.spacing.xxlarge} 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-`
-
-export const Figure = styled.figure`
-  position: relative;
-  display: inline-block;
-  margin: 0 auto;
 `
 
 export const Image = styled(Img)`
