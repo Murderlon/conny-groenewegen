@@ -11,6 +11,8 @@ collections:
     folder: src/pages/re-couture
     create: true
     slug: '{{slug}}'
+    editor:
+      preview: false
     fields:
       - {
           label: Template Key,
@@ -50,6 +52,8 @@ collections:
     folder: src/pages/re-space
     create: true
     slug: '{{slug}}'
+    editor:
+      preview: false
     fields:
       - {
           label: Template Key,
