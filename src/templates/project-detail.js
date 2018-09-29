@@ -19,9 +19,15 @@ export default function Template({ data }) {
   const headerGatsbyImage = data.markdownRemark.childrenImageSharp.find(
     ({ sizes }) => headerImage.image.includes(sizes.originalName)
   )
+  const parent = id =>
+    id.includes('re-couture')
+      ? { link: '/re-couture', label: 'Re-Couture' }
+      : { link: '/re-space', label: 'Re-Space' }
   return (
     <Fragment>
-      <ReturnLink to="/re-couture">Re-Couture</ReturnLink>
+      <ReturnLink to={parent(data.markdownRemark.id).link}>
+        {parent(data.markdownRemark.id).label}
+      </ReturnLink>
       <h1>{title}</h1>
 
       <Image sizes={headerGatsbyImage.sizes} />
@@ -42,6 +48,7 @@ export default function Template({ data }) {
 export const pageQuery = graphql`
   query ProjectPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
+      id
       childrenImageSharp {
         sizes(maxWidth: 1000) {
           originalName
