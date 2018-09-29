@@ -107,7 +107,6 @@ class Index extends Component {
 
         <Article>
           <h2>Collectives</h2>
-          <p>[needs explanation]</p>
           <LayoutWrapper>
             <Section>
               <MaskedVideo src={fama} />
