@@ -4,7 +4,7 @@ category: collections
 title: ecplise aw 2009-2010
 headerImage:
   alt: bathtub
-  image: /assets/bathtub1.jpg
+  image: ''
 description: >-
   Well, the way they make shows is, they make one show. That show's called a
   pilot. Then they show that show to the people who make shows, and on the
