@@ -1,65 +1,112 @@
 import React from 'react'
-import posed, { PoseGroup } from 'react-pose'
+import posed from 'react-pose'
+import styled from 'styled-components'
 
 import Arrow from '../../icons/arrow.svg'
+
 import {
+  Title,
   Wrapper,
   Image,
   CircleWrapper,
   ControlsForm,
-  Button
+  Button,
+  MicroscopeControlIcon
 } from './Mircoscope.style'
 
 const Div = posed.div({
-  flip: {
-    scale: 1,
-    transition: {
-      scale: {
-        type: 'spring',
-        velocity: 3
-      },
-      default: {
-        type: 'spring'
-      }
-    }
+  space: {
+    x: 77,
+    y: ({ i }) => (i == 0 ? 0 : i == 1 ? -10 : -30),
+    opacity: ({ i }) => (i == 0 ? 1 : 0.6)
+  },
+  couture: {
+    x: 6,
+    y: ({ i }) => (i !== 1 ? -10 : 0),
+    opacity: ({ i }) => (i !== 1 ? 0.6 : 1)
+  },
+  materialize: {
+    x: -85,
+    y: ({ i }) => (i == 0 ? -30 : i == 1 ? -10 : 0),
+    opacity: ({ i }) => (i == 2 ? 1 : 0.6)
   }
 })
 
+const Category = styled(Div)`
+  flex: 1 1 0;
+
+  &:first-of-type {
+    text-align: right;
+  }
+
+  &:nth-of-type(2) {
+    padding: 0 ${({ theme }) => theme.spacing.small};
+    text-align: center;
+  }
+
+  input[type='radio'] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+
+    + label {
+      margin: 0;
+      font-weight: 700;
+      font-size: 0.8em;
+
+      @media (min-width: 40em) {
+        font-size: 1em;
+      }
+    }
+
+    &:not(:checked) + label {
+      opacity: 0.6;
+      cursor: pointer;
+    }
+  }
+`
+
 const Microscope = ({ image, categories, activeCategory, color, onChange }) => (
-  <Wrapper>
-    <Image sizes={image.sizes} />
+  <div>
+    <Title color={color}>
+      Re-
+      <span>{activeCategory}</span>
+    </Title>
+    <Wrapper>
+      <Image sizes={image.sizes} />
+      <CircleWrapper color={color}>
+        <div />
+        <div />
+        <div />
+      </CircleWrapper>
+      <Button to={`re-${activeCategory}`} color={color}>
+        Explore
+        <Arrow />
+      </Button>
+    </Wrapper>
+    <MicroscopeControlIcon />
     <ControlsForm color={color}>
-      <span>RE-</span>
-      <div>
-        <PoseGroup>
-          {categories.map(({ label, name, value }) => {
-            return (
-              <Div key={value}>
-                <input
-                  id={value}
-                  type="radio"
-                  name={name}
-                  value={value}
-                  checked={activeCategory === value && activeCategory}
-                  onChange={onChange}
-                />
-                <label htmlFor={value}>{label}</label>
-              </Div>
-            )
-          })}
-        </PoseGroup>
-      </div>
+      {categories.map(({ label, name, value }, i) => {
+        return (
+          <Category
+            key={value}
+            initialPose={activeCategory}
+            pose={activeCategory}
+            i={i}
+          >
+            <input
+              id={value}
+              type="radio"
+              name={name}
+              value={value}
+              checked={activeCategory === value && activeCategory}
+              onChange={onChange}
+            />
+            <label htmlFor={value}>{label}</label>
+          </Category>
+        )
+      })}
     </ControlsForm>
-    <CircleWrapper color={color}>
-      <div />
-      <div />
-      <div />
-    </CircleWrapper>
-    <Button to={`re-${activeCategory}`} color={color}>
-      Explore
-      <Arrow />
-    </Button>
-  </Wrapper>
+  </div>
 )
 
 export default Microscope

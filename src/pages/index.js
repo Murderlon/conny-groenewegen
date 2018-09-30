@@ -25,8 +25,11 @@ const MicroscopeWrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  align-content: center;
   max-width: 65em;
+
+  @media (min-width: 40em) {
+    align-items: center;
+  }
 `
 
 const Section = styled.section`
@@ -58,35 +61,9 @@ class Index extends Component {
 
   handleCategoryChange = ({ target }) => {
     if (target.value !== this.state.active.category) {
-      let nextActiveIndex
-      let nextState
-      const { categories } = this.state
-
-      categories.forEach(cat => {
-        if (cat.value === target.value) {
-          nextActiveIndex = categories.indexOf(cat)
-        }
+      return this.setState({
+        active: { category: target.value, color: this.colors[target.value] }
       })
-      if (nextActiveIndex === 0) {
-        nextState = {
-          active: { category: target.value, color: this.colors[target.value] },
-          categories: [
-            categories[nextActiveIndex + 1],
-            categories[nextActiveIndex],
-            categories[nextActiveIndex + 2]
-          ]
-        }
-      } else {
-        nextState = {
-          active: { category: target.value, color: this.colors[target.value] },
-          categories: [
-            categories[nextActiveIndex - 2],
-            categories[nextActiveIndex],
-            categories[nextActiveIndex - 1]
-          ]
-        }
-      }
-      return this.setState(nextState)
     }
   }
 

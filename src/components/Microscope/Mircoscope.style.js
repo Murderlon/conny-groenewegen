@@ -2,9 +2,25 @@ import styled, { keyframes } from 'styled-components'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 
+import ControlIcon from '../../icons/microscope.svg'
+
+export const Title = styled.h1`
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
+
+  @media (min-width: 40em) {
+    font-size: 2em;
+  }
+
+  span {
+    color: ${({ color }) => color};
+  }
+`
+
 export const Wrapper = styled.section`
   position: relative;
-  margin: ${({ theme }) => theme.spacing.xxlarge} 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,7 +58,7 @@ export const Span = styled.span`
 export const Button = styled(Link)`
   position: absolute;
   right: 1rem;
-  bottom: 0;
+  bottom: 1rem;
   background: ${({ color }) => color};
   color: ${({ theme }) => theme.black};
   padding: ${({ theme }) => `${theme.spacing.xsmall} ${theme.spacing.small}`};
@@ -111,45 +127,14 @@ export const CircleWrapper = styled.div`
 `
 
 export const ControlsForm = styled.form`
-  position: absolute;
-  top: -8rem;
-  left: -4rem;
   display: flex;
-  margin-top: ${({ theme }) => theme.spacing.medium};
+  justify-content: space-between;
+  margin: ${({ theme }) => theme.spacing.medium} 0;
   text-transform: uppercase;
   font-family: 'IBM Plex Mono', mono;
-
-  span {
-    font-size: 2.3em;
-    font-weight: 700;
-    align-self: center;
-  }
-
-  input[type='radio'] {
-    position: absolute;
-    clip: rect(0, 0, 0, 0);
-
-    div {
-      margin: ${({ theme }) => theme.spacing.medium};
-      display: flex;
-      flex-direction: column;
-    }
-
-    + label {
-      margin: 0;
-      font-weight: 700;
-      font-size: 1.2em;
-    }
-
-    &:checked + label {
-      font-size: 2.3em;
-      font-weight: 700;
-      color: ${({ color }) => color};
-    }
-
-    &:not(:checked) + label {
-      cursor: pointer;
-      opacity: 0.8;
-    }
-  }
+`
+export const MicroscopeControlIcon = styled(ControlIcon)`
+  width: 14em;
+  display: block;
+  margin: 0 auto;
 `
