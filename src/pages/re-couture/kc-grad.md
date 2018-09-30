@@ -3,6 +3,7 @@ templateKey: project-detail
 category: collaborations
 title: KC Grad
 headerImage:
+  alt: KC Grad
   image: /assets/03-12977002_10156975010830727_7640422635883544727_b.jpg
 description: >-
   EXPLORING INSPIRATIONS 2015-2017
@@ -21,6 +22,7 @@ description: >-
   Balkans. Project Exploring Inspirations is supported by Creative Industries
   Fund Netherlands.
 images:
-  - image: /assets/05img_7888b.jpg
+  - alt: KC Grad
+    image: /assets/05img_7888b.jpg
 ---
 
