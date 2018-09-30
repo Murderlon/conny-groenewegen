@@ -11,10 +11,6 @@ description: >-
   strength of that one show they decide if they're going to make more shows.
   Some pilots get picked and become television programs. Some don't, become
   nothing. She starred in one of the ones that became nothing.
-images:
-  - alt: yeah
-    image: /assets/kandinsky.jpg
-  - alt: bro
-    image: /assets/alena-aenami-7p-m-1k.jpg
+images: []
 ---
 
