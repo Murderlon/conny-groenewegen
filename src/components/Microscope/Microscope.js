@@ -17,7 +17,6 @@ import {
 const Div = posed.div({
   space: {
     x: 84,
-    z: p => console.log(p),
     y: ({ i }) => (i == 0 ? 0 : i == 1 ? -10 : -30),
     opacity: ({ i }) => (i == 0 ? 1 : 0.6)
   },
