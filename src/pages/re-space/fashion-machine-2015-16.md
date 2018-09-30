@@ -2,6 +2,7 @@
 templateKey: project-detail
 title: Fashion Machine 2015-16
 headerImage:
+  alt: Fashion Machine 2015-16
   image: /assets/02-color-sorted-fleece-spindles-2.jpg
 description: >-
   HNI/Temporary Fashion Museum
@@ -50,10 +51,15 @@ description: >-
 
   Photography: Johannes Schwartz, Ralph Vaessen
 images:
-  - image: /assets/01-fleece-collection-station.jpg
-  - image: /assets/03-twined-fleece-strips.jpg
-  - image: /assets/04-twined-fleece-strips-2.jpg
-  - image: /assets/5-black-fleece-knitting-station-2.jpg
-  - image: /assets/6-red-fleece-knitting-statiion-2.jpg
+  - alt: Fashion Machine 2015-16
+    image: /assets/01-fleece-collection-station.jpg
+  - alt: Fashion Machine 2015-16
+    image: /assets/03-twined-fleece-strips.jpg
+  - alt: Fashion Machine 2015-16
+    image: /assets/04-twined-fleece-strips-2.jpg
+  - alt: Fashion Machine 2015-16
+    image: /assets/5-black-fleece-knitting-station-2.jpg
+  - alt: Fashion Machine 2015-16
+    image: /assets/6-red-fleece-knitting-statiion-2.jpg
 ---
 
