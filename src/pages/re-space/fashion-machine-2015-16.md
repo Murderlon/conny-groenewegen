@@ -51,5 +51,9 @@ description: >-
   Photography: Johannes Schwartz, Ralph Vaessen
 images:
   - image: /assets/01-fleece-collection-station.jpg
+  - image: /assets/03-twined-fleece-strips.jpg
+  - image: /assets/04-twined-fleece-strips-2.jpg
+  - image: /assets/5-black-fleece-knitting-station-2.jpg
+  - image: /assets/6-red-fleece-knitting-statiion-2.jpg
 ---
 
