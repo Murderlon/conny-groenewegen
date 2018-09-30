@@ -3,6 +3,7 @@ templateKey: project-detail
 category: collaborations
 title: Femke de Vries
 headerImage:
+  alt: Femke de Vries
   image: /assets/01-tenderbooks-1296.jpg
 description: >
   TRUI
@@ -45,9 +46,13 @@ description: >
 
   Photography: Sanne van den Elzen
 images:
-  - image: /assets/02-dsc2854svde.jpg
-  - image: /assets/03-dictionary-dressings-cg-8.jpg
-  - image: /assets/04-dd-at-onomatopee.jpg
-  - image: /assets/05-dd-at-onomatopee.jpg
+  - alt: Femke de Vries
+    image: /assets/02-dsc2854svde.jpg
+  - alt: Femke de Vries
+    image: /assets/03-dictionary-dressings-cg-8.jpg
+  - alt: Femke de Vries
+    image: /assets/04-dd-at-onomatopee.jpg
+  - alt: Femke de Vries
+    image: /assets/05-dd-at-onomatopee.jpg
 ---
 
