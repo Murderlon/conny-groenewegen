@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
-import Image from 'gatsby-image'
 
 import ReturnLink from '../components/ReturnLink'
 
@@ -10,15 +9,17 @@ const ImageGrid = styled.section`
   margin: ${({ theme }) => theme.spacing.large} 0;
 `
 
-const Img = styled(Image)`
+const Img = styled.img`
   margin: ${({ theme }) => theme.spacing.small} 0;
 `
 
 export default function Template({ data }) {
-  const { title, headerImage, description } = data.markdownRemark.frontmatter
-  const headerGatsbyImage = data.markdownRemark.childrenImageSharp.find(
-    ({ sizes }) => headerImage.image.includes(sizes.originalName)
-  )
+  const {
+    title,
+    headerImage,
+    description,
+    images
+  } = data.markdownRemark.frontmatter
   const parent = id =>
     id.includes('re-couture')
       ? { link: '/re-couture', label: 'Re-Couture' }
@@ -30,16 +31,13 @@ export default function Template({ data }) {
       </ReturnLink>
       <h1>{title}</h1>
 
-      <Image sizes={headerGatsbyImage.sizes} />
+      <img src={headerImage.image} alt={headerImage.alt} />
       {description && <p>{description}</p>}
 
       <ImageGrid>
-        {data.markdownRemark.childrenImageSharp.map(
-          ({ sizes }) =>
-            headerImage.image.includes(sizes.originalName) ? null : (
-              <Img sizes={sizes} key={sizes.originalName} />
-            )
-        )}
+        {images.map(({ image, alt }, i) => (
+          <Img key={i} src={image} alt={alt} />
+        ))}
       </ImageGrid>
     </Fragment>
   )
@@ -49,12 +47,6 @@ export const pageQuery = graphql`
   query ProjectPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
-      childrenImageSharp {
-        sizes(maxWidth: 1000) {
-          originalName
-          ...GatsbyImageSharpSizes
-        }
-      }
       frontmatter {
         title
         headerImage {
