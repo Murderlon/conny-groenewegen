@@ -20,8 +20,7 @@ const LayoutWrapper = styled.div`
 `
 
 const MicroscopeWrapper = styled.div`
-  min-height: 80vh;
-  margin: 0 auto;
+  margin: ${({theme}) => theme.spacing.enormous} auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
