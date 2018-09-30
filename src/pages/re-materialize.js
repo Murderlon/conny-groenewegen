@@ -68,7 +68,7 @@ const ReMaterialize = ({ data }) => {
   }
   return (
     <Fragment>
-      <CategoryHeader title="materialize" color="red">
+      <CategoryHeader title="materialize" color="cyan">
         <p>
           My research traces back to the origins of methods. Peeling off tired
           layers of self-evidence to find a sparkle of unexpected material
