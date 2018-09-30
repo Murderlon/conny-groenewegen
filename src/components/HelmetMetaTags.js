@@ -22,8 +22,7 @@ const HelmetMetaTags = () => (
     />
     <meta property="og:image" content="/OGimage.png" />
     <meta property="og:site_name" content="Conny Groenewegen" />
-    {/* Change this!!! */}
-    <meta property="og:url" content="" />
+    <meta property="og:url" content="https://connygroenewegen.nl" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
