@@ -16,17 +16,18 @@ import {
 
 const Div = posed.div({
   space: {
-    x: 78,
+    x: 84,
+    z: p => console.log(p),
     y: ({ i }) => (i == 0 ? 0 : i == 1 ? -10 : -30),
     opacity: ({ i }) => (i == 0 ? 1 : 0.6)
   },
   couture: {
-    x: 10,
+    x: 17,
     y: ({ i }) => (i !== 1 ? -10 : 0),
     opacity: ({ i }) => (i !== 1 ? 0.6 : 1)
   },
   materialize: {
-    x: -80,
+    x: -77,
     y: ({ i }) => (i == 0 ? -30 : i == 1 ? -10 : 0),
     opacity: ({ i }) => (i == 2 ? 1 : 0.6)
   }
@@ -50,11 +51,7 @@ const Category = styled(Div)`
 
     + label {
       margin: 0;
-      font-size: 0.8em;
-
-      @media (min-width: 40em) {
-        font-size: 1em;
-      }
+      font-size: 0.9em;
     }
 
     &:not(:checked) + label {

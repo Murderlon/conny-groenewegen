@@ -127,9 +127,10 @@ export const CircleWrapper = styled.div`
 `
 
 export const ControlsForm = styled.form`
+  max-width: 256px;
   display: flex;
   justify-content: space-between;
-  margin: ${({ theme }) => theme.spacing.medium} 0;
+  margin: ${({ theme }) => theme.spacing.medium} auto;
   text-transform: uppercase;
   font-family: 'IBM Plex Mono', mono;
 `
