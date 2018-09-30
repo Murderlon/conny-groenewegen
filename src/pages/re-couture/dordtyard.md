@@ -4,7 +4,7 @@ category: exhibitions
 title: dordtyard
 headerImage:
   alt: gravy
-  image: /assets/gravy-river-2.png
+  image: ''
 description: >-
   Well, the way they make shows is, they make one show. That show's called a
   pilot. Then they show that show to the people who make shows, and on the
