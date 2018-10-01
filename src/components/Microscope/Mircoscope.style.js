@@ -79,10 +79,7 @@ export const CircleWrapper = styled.div`
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    background-image: linear-gradient(to right, #434343 0%, black 100%);
-    box-shadow: 0 0 10px ${({ theme }) => theme.black},
-      0 0 5px ${({ theme }) => theme.black};
-    opacity: 0.8;
+    border: 3px solid ${({ theme }) => theme.white};
 
     @media (min-width: 40em) {
       width: 2.5rem;
