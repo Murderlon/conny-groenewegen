@@ -73,6 +73,14 @@ export const ProjectFragment = graphql`
         headerImage {
           alt
           image
+          src {
+            childImageSharp {
+              sizes(maxWidth: 1000) {
+                originalName
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
         }
       }
     }

@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import Image from 'gatsby-image'
 import styled from 'styled-components'
 
 import ReturnLink from '../components/ReturnLink'
@@ -9,7 +10,7 @@ const ImageGrid = styled.section`
   margin: ${({ theme }) => theme.spacing.large} 0;
 `
 
-const Img = styled.img`
+const Img = styled(Image)`
   margin: ${({ theme }) => theme.spacing.small} 0;
 `
 
@@ -31,12 +32,12 @@ export default function Template({ data }) {
       </ReturnLink>
       <h1>{title}</h1>
 
-      <img src={headerImage.image} alt={headerImage.alt} />
+      <Image sizes={headerImage.src.childImageSharp.sizes} />
       {description && <p>{description}</p>}
 
       <ImageGrid>
-        {images.map(({ image, alt }, i) => (
-          <Img key={i} src={image} alt={alt} />
+        {images.map(({ src, alt }, i) => (
+          <Img key={i} sizes={src.childImageSharp.sizes} alt={alt} />
         ))}
       </ImageGrid>
     </Fragment>
@@ -51,12 +52,26 @@ export const pageQuery = graphql`
         title
         headerImage {
           alt
-          image
+          src {
+            childImageSharp {
+              sizes(maxWidth: 1000) {
+                originalName
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
         }
         description
         images {
           alt
-          image
+          src {
+            childImageSharp {
+              sizes(maxWidth: 1000) {
+                originalName
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
         }
       }
     }
