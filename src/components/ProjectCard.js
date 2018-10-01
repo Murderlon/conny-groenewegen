@@ -10,6 +10,7 @@ const Article = styled.article`
   border-radius: 3px;
   margin: ${({ theme }) => theme.spacing.medium} 0;
   flex: 1 1 100%;
+  align-self: flex-start;
 
   @media (min-width: 40em) {
     flex: 0 1 47%;
@@ -25,15 +26,6 @@ const Article = styled.article`
     margin: 0;
     border-bottom: 2px solid ${({ theme }) => theme.white};
     font-size: 1em;
-  }
-  div {
-    height: 15em;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
   }
 `
 

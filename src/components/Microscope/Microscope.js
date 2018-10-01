@@ -60,26 +60,26 @@ const Category = styled(Div)`
   }
 `
 
-const Microscope = ({ image, categories, activeCategory, color, onChange }) => (
+const Microscope = ({ image, categories, activeCategory, onChange }) => (
   <div>
-    <Title color={color}>
+    <Title>
       Re-
-      <span>{activeCategory}</span>
+      {activeCategory}
     </Title>
     <Wrapper>
       <Image sizes={image.sizes} />
-      <CircleWrapper color={color}>
+      <CircleWrapper>
         <div />
         <div />
         <div />
       </CircleWrapper>
-      <Button to={`re-${activeCategory}`} color={color}>
+      <Button to={`re-${activeCategory}`}>
         Explore
         <Arrow />
       </Button>
     </Wrapper>
     <MicroscopeControlIcon />
-    <ControlsForm color={color}>
+    <ControlsForm>
       {categories.map(({ label, name, value }, i) => {
         return (
           <Category

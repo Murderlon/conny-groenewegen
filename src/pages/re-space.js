@@ -15,7 +15,7 @@ const ReSpace = ({ data }) => {
 
   return (
     <Fragment>
-      <CategoryHeader title="Space" color="blue">
+      <CategoryHeader title="Space">
         <p>
           My spatial machines, derived from the age-old artisanal practices of
           knitting and knotting reload public spaces with purpose and meaning.
@@ -48,7 +48,6 @@ export const pageQuery = graphql`
             title
             headerImage {
               alt
-              image
               src {
                 childImageSharp {
                   sizes(maxWidth: 1000) {

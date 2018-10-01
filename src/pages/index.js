@@ -20,7 +20,7 @@ const LayoutWrapper = styled.div`
 `
 
 const MicroscopeWrapper = styled.div`
-  margin: ${({theme}) => theme.spacing.enormous} auto;
+  margin: ${({ theme }) => theme.spacing.enormous} auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -43,38 +43,32 @@ const Section = styled.section`
 class Index extends Component {
   constructor(props) {
     super(props)
-    this.colors = {
-      space: this.props.theme.magenta,
-      couture: this.props.theme.yellow,
-      materialize: this.props.theme.cyan
-    }
     this.state = {
       categories: [
         { label: 'Space', name: 'category', value: 'space' },
         { label: 'Couture', name: 'category', value: 'couture' },
         { label: 'Materialize', name: 'category', value: 'materialize' }
       ],
-      active: { category: 'couture', color: this.props.theme.yellow }
+      active: { category: 'couture' }
     }
   }
 
   handleCategoryChange = ({ target }) => {
     if (target.value !== this.state.active.category) {
       return this.setState({
-        active: { category: target.value, color: this.colors[target.value] }
+        active: { category: target.value }
       })
     }
   }
 
   render() {
     const { data } = this.props
-    const { category, color } = this.state.active
+    const { category } = this.state.active
     return (
       <Fragment>
         <MicroscopeWrapper>
           <Microscope
             image={data[category].childImageSharp}
-            color={color}
             categories={this.state.categories}
             activeCategory={category}
             onChange={this.handleCategoryChange}
