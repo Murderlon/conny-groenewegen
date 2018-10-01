@@ -46,7 +46,10 @@ const ProjectCard = ({ node }) => {
           {title} <ArrowIcon />
         </h2>
         <div>
-          <Image sizes={headerImage.src.childImageSharp.sizes} />
+          <Image
+            sizes={headerImage.src.childImageSharp.sizes}
+            alt={headerImage.alt}
+          />
         </div>
       </GatbyLink>
     </Article>
