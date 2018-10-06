@@ -19,6 +19,10 @@ const Wrapper = styled.div`
   grid-template-rows: auto;
   grid-gap: ${({ theme }) => theme.spacing.large};
   align-items: end;
+
+  article:last-of-type {
+    align-self: start;
+  }
 `
 
 const ReSpace = ({ data }) => {

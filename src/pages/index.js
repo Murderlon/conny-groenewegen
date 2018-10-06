@@ -20,13 +20,13 @@ const LayoutWrapper = styled.div`
 `
 
 const MicroscopeWrapper = styled.div`
-  margin: ${({ theme }) => theme.spacing.enormous} auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   max-width: 65em;
 
   @media (min-width: 40em) {
+    margin: ${({ theme }) => theme.spacing.enormous} auto;
     align-items: center;
   }
 `

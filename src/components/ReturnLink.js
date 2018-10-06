@@ -7,7 +7,7 @@ import ArrowIcon from '../icons/arrow.svg'
 const Link = styled(GatbyLink)`
   font-family: 'IBM Plex Mono', mono;
   font-weight: 400;
-  display: block;
+  display: inline-block;
   text-transform: uppercase;
   margin-bottom: ${({ theme }) => theme.spacing.small};
 
