@@ -1,23 +1,28 @@
 ---
-templateKey: 'about'
+templateKey: about
+socialMedia:
+  - displayValue: cg@connygroenewegen.nl
+    label: e-mail
+    link: 'mailto:cg@connygroenewegen.nl'
 ---
+## Summary:
 
-### Shade-grown coffee
+I am a fashion designer, artist, fabric and product developer who studied Fashion Design and Fine Art (BA hons) at Willem de Kooning Academy in Rotterdam followed by a Masterclass 3D textiles with former Issey Miyake head of design Yoshiki Hishinuma. From 2009 until 2018 I worked in education, at some of the premier design and art universities in the Netherlands like Design Academy Eindhoven and ArtEZ Fashion Department in Arnhem. My work has been exhibited widely with a number of venues, galleries, museums and art organizations, including: Paris and Tokyo Fashion Week, Beijing and Istanbul Design Biennale, Dutch Design Week Eindhoven, Costume Museum in Milan, National Museum of Fine Arts Buenos Aires and The New Institute. I’ve done several art residencies at Cité Internationale des Arts, Paris and KC Grad cultural institute Belgrade amongst others and was rewarded with the Mercedes Benz Dutch Fashion Award 2011. I organized independent fashion shows, presentations and campaign shoots for my fashion collections and did creative direction for fashion photography and presentations for We Are Muze collective from 2015 till 2017. Next to that I work as creative consultant, design researcher and developer for EeStairs (bespoke stairs and balustrades).
 
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+## My working method
 
-### Single origin
+After completing a study in fashion and visual art, I started making drawings. Fascinated by the clear line I drew wall-sized drawings of landscapes with gossamer pencil lines in a format where you could step into. In the next phase the paper came off the wall and became spatial. Through recesses for heads you then literally became part of the drawing. The conversion from 2D to 3D, from line to thread and vice versa is a continuous theme in all my work.
 
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+My area of expertise is knitting. I mostly create material using rows of interlocking loops from one continuous thread. All loops are essential; if one breaks, it creates a hole. I consider this as symbolic of interpersonal relationships: you cannot impose or force anything without causing damage. Similarly, I enter into collaborations in which I challenge and am likewise challenged. The Fashion Machine project has arisen from this philosophy and from my confrontation with fashion’s volatility and high turn-around speed.
 
-### Sustainable farming
+In addition, my work is an invitation to look in a different way to recognizable archetypal forms with the aim to redefine them. For this I develop unexpected materials and learn how to master a technique. I do this via prototypes which lead me on to the desired form. The results are snapshots and temporary proposals, because new insights emerge that lead to a next prototype. Additionally, together with the people I work with, we adjust the set of rules whenever we feel invited to in order to enter a new, interesting playfield.
 
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
 
-### Direct sourcing
 
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
+## Studio Address:
 
-### Reinvest profits
+Zeeburgerdijk 25G
 
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+1093 SK 
+
+Amsterdam
