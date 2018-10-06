@@ -44,9 +44,9 @@ class Index extends Component {
   constructor(props) {
     super(props)
     this.colors = {
-      space: this.props.theme.magenta,
-      couture: this.props.theme.yellow,
-      materialize: this.props.theme.cyan
+      space: this.props.theme.spaceColor,
+      couture: this.props.theme.coutureColor,
+      materialize: this.props.theme.materializeColor
     }
     this.state = {
       categories: [
@@ -54,7 +54,7 @@ class Index extends Component {
         { label: 'Couture', name: 'category', value: 'couture' },
         { label: 'Materialize', name: 'category', value: 'materialize' }
       ],
-      active: { category: 'couture', color: this.props.theme.yellow }
+      active: { category: 'couture', color: this.props.theme.coutureColor }
     }
   }
 

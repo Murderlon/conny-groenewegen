@@ -34,7 +34,7 @@ const ReSpace = ({ data }) => {
 
   return (
     <Fragment>
-      <CategoryHeader title="Couture" color="yellow">
+      <CategoryHeader title="Couture" color="coutureColor">
         <p>
           The fibers and threads I use reassemble the narrative to reach a point
           where the material starts to create a path that follows its own rules.

@@ -5,8 +5,17 @@ import posed from 'react-pose'
 
 import ControlIcon from '../../icons/microscope.svg'
 
+export const Div = styled.div`
+  position: relative;
+  @media (max-width: 20em) {
+    overflow: hidden;
+  }
+`
+
 export const Title = styled.h1`
-  text-transform: uppercase;
+  position: absolute;
+  z-index: 2;
+  left: 0;
   font-weight: 700;
   margin: 0;
 
@@ -16,6 +25,8 @@ export const Title = styled.h1`
 
   span {
     color: ${({ color }) => color};
+    text-transform: capitalize;
+    display: inline-block;
   }
 `
 
@@ -97,29 +108,35 @@ export const CircleWrapper = styled.div`
   }
 
   div:first-of-type {
-    top: 5rem;
-    right: 14rem;
+    top: 12rem;
+    right: 13rem;
     animation: ${float} 10s infinite linear;
 
     @media (min-width: 40em) {
+      top: 14rem;
       right: 17rem;
     }
   }
 
   div:nth-of-type(2) {
-    top: 3rem;
-    right: 0;
+    top: 2.5rem;
+    right: 13rem;
     animation: ${float} 14s infinite linear;
+
+    @media (min-width: 40em) {
+      top: 4rem;
+      right: 16rem;
+    }
   }
 
   div:last-of-type {
-    top: 13rem;
-    right: 12rem;
+    top: 8rem;
+    right: 1rem;
     animation: ${float} 5s infinite linear;
 
     @media (min-width: 40em) {
-      top: 17rem;
-      right: 14rem;
+      top: 10rem;
+      right: 1rem;
     }
   }
 `
@@ -136,9 +153,10 @@ export const MicroscopeControlIcon = styled(ControlIcon)`
   width: 14em;
   display: block;
   margin: 0 auto;
+  margin-top: ${({ theme }) => theme.spacing.small};
 `
 
-const Div = posed.div({
+const Posed = posed.div({
   space: {
     x: 84,
     y: ({ i }) => (i == 0 ? 0 : i == 1 ? -10 : -30),
@@ -156,7 +174,7 @@ const Div = posed.div({
   }
 })
 
-export const Category = styled(Div)`
+export const Category = styled(Posed)`
   flex: 1 1 0;
 
   &:first-of-type {

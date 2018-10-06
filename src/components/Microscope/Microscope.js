@@ -3,6 +3,7 @@ import React from 'react'
 import Arrow from '../../icons/arrow.svg'
 
 import {
+  Div,
   Title,
   Wrapper,
   Image,
@@ -14,9 +15,9 @@ import {
 } from './Mircoscope.style'
 
 const Microscope = ({ image, categories, activeCategory, color, onChange }) => (
-  <div>
+  <Div>
     <Title color={color}>
-      Re-
+      RE-
       <span>{activeCategory}</span>
     </Title>
     <Wrapper>
@@ -54,7 +55,7 @@ const Microscope = ({ image, categories, activeCategory, color, onChange }) => (
         )
       })}
     </ControlsForm>
-  </div>
+  </Div>
 )
 
 export default Microscope
