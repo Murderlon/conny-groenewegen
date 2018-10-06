@@ -54,7 +54,7 @@ class Index extends Component {
         { label: 'Couture', name: 'category', value: 'couture' },
         { label: 'Materialize', name: 'category', value: 'materialize' }
       ],
-      active: { category: 'couture', color: this.props.theme.red }
+      active: { category: 'couture', color: this.props.theme.coutureColor }
     }
   }
 
