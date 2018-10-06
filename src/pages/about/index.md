@@ -1,6 +1,7 @@
 ---
 templateKey: about
 ---
+![dit ben ik](/assets/01-mg_3461-web.jpg)
 
 ## Summary:
 
