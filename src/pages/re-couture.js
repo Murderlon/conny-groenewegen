@@ -14,9 +14,11 @@ const Heading = styled.h2`
 `
 
 const Wrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: ${({ theme }) => theme.spacing.large};
+  align-items: end;
 `
 
 const ReSpace = ({ data }) => {
