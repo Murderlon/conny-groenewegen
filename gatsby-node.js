@@ -1,5 +1,6 @@
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
+const delve = require('dlv')
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators
@@ -50,8 +51,8 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
-    const headerImage = node.frontmatter.headerImage.image
-    const images = node.frontmatter.images
+    const headerImage = delve(node, 'frontmatter.headerImage.image')
+    const images = delve(node, 'frontmatter.images')
 
     createNodeField({
       name: `slug`,
@@ -66,7 +67,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
       )
     }
 
-    if (images.length > 0) {
+    if (images && images.length > 0) {
       images.map(({ image }, i) => {
         node.frontmatter.images[i].src = path.relative(
           path.dirname(node.fileAbsolutePath),
