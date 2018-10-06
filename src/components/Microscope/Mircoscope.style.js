@@ -12,6 +12,10 @@ export const Title = styled.h1`
   @media (min-width: 40em) {
     font-size: 2em;
   }
+
+  span {
+    color: ${({ color }) => color};
+  }
 `
 
 export const Wrapper = styled.section`
@@ -47,11 +51,15 @@ export const Image = styled(Img)`
   }
 `
 
+export const Span = styled.span`
+  color: ${({ color }) => color};
+`
+
 export const Button = styled(Link)`
   position: absolute;
   right: 1rem;
   bottom: 1rem;
-  background: ${({ theme }) => theme.white};
+  background: ${({ color }) => color};
   color: ${({ theme }) => theme.black};
   padding: ${({ theme }) => `${theme.spacing.xsmall} ${theme.spacing.small}`};
   font-family: 'IBM Plex Mono', mono;

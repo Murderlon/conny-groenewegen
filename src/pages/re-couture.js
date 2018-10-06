@@ -28,7 +28,7 @@ const ReSpace = ({ data }) => {
 
   return (
     <Fragment>
-      <CategoryHeader title="Couture">
+      <CategoryHeader title="Couture" color="yellow">
         <p>
           The fibers and threads I use reassemble the narrative to reach a point
           where the material starts to create a path that follows its own rules.
@@ -72,6 +72,7 @@ export const ProjectFragment = graphql`
         title
         headerImage {
           alt
+          image
           src {
             childImageSharp {
               sizes(maxWidth: 1000) {

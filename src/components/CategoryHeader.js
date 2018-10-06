@@ -7,9 +7,13 @@ import ReturnLink from '../components/ReturnLink'
 const Heading = styled.h1`
   text-transform: uppercase;
   font-weight: 700;
+
+  span {
+    color: ${({ theme, color }) => theme[color]};
+  }
 `
 
-const CategoryHeader = ({ title, children }) => {
+const CategoryHeader = ({ title, color, children }) => {
   return (
     <Fragment>
       <Helmet>
@@ -19,9 +23,9 @@ const CategoryHeader = ({ title, children }) => {
         </title>
       </Helmet>
       <ReturnLink to="/">Overview</ReturnLink>
-      <Heading>
+      <Heading color={color}>
         re-
-        {title}
+        <span>{title}</span>
       </Heading>
       {children}
     </Fragment>
