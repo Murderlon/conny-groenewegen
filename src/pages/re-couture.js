@@ -72,7 +72,6 @@ export const ProjectFragment = graphql`
         title
         headerImage {
           alt
-          image
           src {
             childImageSharp {
               sizes(maxWidth: 1000) {
