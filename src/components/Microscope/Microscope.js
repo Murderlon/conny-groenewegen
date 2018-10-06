@@ -1,6 +1,4 @@
 import React from 'react'
-import posed from 'react-pose'
-import styled from 'styled-components'
 
 import Arrow from '../../icons/arrow.svg'
 
@@ -10,55 +8,10 @@ import {
   Image,
   CircleWrapper,
   ControlsForm,
+  Category,
   Button,
   MicroscopeControlIcon
 } from './Mircoscope.style'
-
-const Div = posed.div({
-  space: {
-    x: 84,
-    y: ({ i }) => (i == 0 ? 0 : i == 1 ? -10 : -30),
-    opacity: ({ i }) => (i == 0 ? 1 : 0.6)
-  },
-  couture: {
-    x: 17,
-    y: ({ i }) => (i !== 1 ? -10 : 0),
-    opacity: ({ i }) => (i !== 1 ? 0.6 : 1)
-  },
-  materialize: {
-    x: -77,
-    y: ({ i }) => (i == 0 ? -30 : i == 1 ? -10 : 0),
-    opacity: ({ i }) => (i == 2 ? 1 : 0.6)
-  }
-})
-
-const Category = styled(Div)`
-  flex: 1 1 0;
-
-  &:first-of-type {
-    text-align: right;
-  }
-
-  &:nth-of-type(2) {
-    padding: 0 ${({ theme }) => theme.spacing.small};
-    text-align: center;
-  }
-
-  input[type='radio'] {
-    position: absolute;
-    clip: rect(0, 0, 0, 0);
-
-    + label {
-      margin: 0;
-      font-size: 0.9em;
-    }
-
-    &:not(:checked) + label {
-      opacity: 0.6;
-      cursor: pointer;
-    }
-  }
-`
 
 const Microscope = ({ image, categories, activeCategory, color, onChange }) => (
   <div>

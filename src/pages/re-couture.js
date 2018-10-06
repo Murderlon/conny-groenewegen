@@ -76,7 +76,6 @@ export const ProjectFragment = graphql`
           src {
             childImageSharp {
               sizes(maxWidth: 1000) {
-                originalName
                 ...GatsbyImageSharpSizes
               }
             }

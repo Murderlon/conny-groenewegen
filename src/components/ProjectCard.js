@@ -10,6 +10,7 @@ const Article = styled.article`
   border-radius: 3px;
   margin: ${({ theme }) => theme.spacing.medium} 0;
   flex: 1 1 100%;
+  align-self: center;
 
   @media (min-width: 40em) {
     flex: 0 1 47%;
