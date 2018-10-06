@@ -1,17 +1,17 @@
-import React, { Fragment } from "react";
-import styled from "styled-components";
+import React, { Fragment } from 'react'
+import styled from 'styled-components'
 
-import ProjectCard from "../components/ProjectCard";
-import CategoryHeader from "../components/CategoryHeader";
+import ProjectCard from '../components/ProjectCard'
+import CategoryHeader from '../components/CategoryHeader'
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-`;
+`
 
 const ReSpace = ({ data }) => {
-  const projects = data.allMarkdownRemark.edges;
+  const projects = data.allMarkdownRemark.edges
 
   return (
     <Fragment>
@@ -31,10 +31,10 @@ const ReSpace = ({ data }) => {
         ))}
       </Wrapper>
     </Fragment>
-  );
-};
+  )
+}
 
-export default ReSpace;
+export default ReSpace
 
 export const pageQuery = graphql`
   query ReSpaceProjects {
@@ -61,4 +61,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

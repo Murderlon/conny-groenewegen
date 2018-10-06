@@ -1,13 +1,13 @@
-import styled, { keyframes } from "styled-components";
-import Link from "gatsby-link";
-import Img from "gatsby-image";
-import posed from "react-pose";
+import styled, { keyframes } from 'styled-components'
+import Link from 'gatsby-link'
+import Img from 'gatsby-image'
+import posed from 'react-pose'
 
-import ControlIcon from "../../icons/microscope.svg";
+import ControlIcon from '../../icons/microscope.svg'
 
 export const Div = styled.div`
   position: relative;
-`;
+`
 
 export const Title = styled.h1`
   position: absolute;
@@ -25,7 +25,7 @@ export const Title = styled.h1`
     text-transform: capitalize;
     display: inline-block;
   }
-`;
+`
 
 export const Wrapper = styled.section`
   position: relative;
@@ -33,7 +33,7 @@ export const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-`;
+`
 
 export const Image = styled(Img)`
   object-fit: cover;
@@ -50,7 +50,7 @@ export const Image = styled(Img)`
     position: absolute;
     left: 0;
     top: 0;
-    content: "";
+    content: '';
     width: 100%;
     height: 100%;
     box-shadow: inset 0 0 20px ${({ theme }) => theme.black},
@@ -58,11 +58,11 @@ export const Image = styled(Img)`
       inset 0 0 5px ${({ theme }) => theme.black};
     border-radius: 50%;
   }
-`;
+`
 
 export const Span = styled.span`
   color: ${({ color }) => color};
-`;
+`
 
 export const Button = styled(Link)`
   position: absolute;
@@ -71,14 +71,14 @@ export const Button = styled(Link)`
   background: ${({ color }) => color};
   color: ${({ theme }) => theme.black};
   padding: ${({ theme }) => `${theme.spacing.xsmall} ${theme.spacing.small}`};
-  font-family: "IBM Plex Mono", mono;
+  font-family: 'IBM Plex Mono', mono;
   text-transform: uppercase;
   border-radius: 3px;
 
   svg {
     margin-left: ${({ theme }) => theme.spacing.small};
   }
-`;
+`
 
 const float = keyframes`
   from {
@@ -88,7 +88,7 @@ const float = keyframes`
   to {
     transform: rotate(360.001deg) translate3d(8px, 0, 0) rotate(-360.001deg);
   }
-`;
+`
 
 export const CircleWrapper = styled.div`
   div {
@@ -130,7 +130,7 @@ export const CircleWrapper = styled.div`
       right: 14rem;
     }
   }
-`;
+`
 
 export const ControlsForm = styled.form`
   max-width: 256px;
@@ -138,14 +138,14 @@ export const ControlsForm = styled.form`
   justify-content: space-between;
   margin: ${({ theme }) => theme.spacing.medium} auto;
   text-transform: uppercase;
-  font-family: "IBM Plex Mono", mono;
-`;
+  font-family: 'IBM Plex Mono', mono;
+`
 export const MicroscopeControlIcon = styled(ControlIcon)`
   width: 14em;
   display: block;
   margin: 0 auto;
   margin-top: ${({ theme }) => theme.spacing.small};
-`;
+`
 
 const Posed = posed.div({
   space: {
@@ -163,7 +163,7 @@ const Posed = posed.div({
     y: ({ i }) => (i == 0 ? -30 : i == 1 ? -10 : 0),
     opacity: ({ i }) => (i == 2 ? 1 : 0.6)
   }
-});
+})
 
 export const Category = styled(Posed)`
   flex: 1 1 0;
@@ -177,7 +177,7 @@ export const Category = styled(Posed)`
     text-align: center;
   }
 
-  input[type="radio"] {
+  input[type='radio'] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
 
@@ -190,4 +190,4 @@ export const Category = styled(Posed)`
       cursor: pointer;
     }
   }
-`;
+`

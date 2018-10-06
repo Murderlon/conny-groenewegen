@@ -1,4 +1,4 @@
-import modularScale from "../helpers/modular-scale";
+import modularScale from '../helpers/modular-scale'
 
 const variables = {
   spacing: {
@@ -12,8 +12,8 @@ const variables = {
     huge: modularScale(8),
     enormous: modularScale(10)
   },
-  transitionDuration: "150ms",
-  timingFunction: "cubic-bezier(0.5, 0 , 0.5, 1)"
-};
+  transitionDuration: '150ms',
+  timingFunction: 'cubic-bezier(0.5, 0 , 0.5, 1)'
+}
 
-export default variables;
+export default variables

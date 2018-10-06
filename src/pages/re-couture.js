@@ -1,30 +1,30 @@
-import React, { Fragment } from "react";
-import styled from "styled-components";
-import delve from "dlv";
+import React, { Fragment } from 'react'
+import styled from 'styled-components'
+import delve from 'dlv'
 
-import ProjectCard from "../components/ProjectCard";
-import CategoryHeader from "../components/CategoryHeader";
+import ProjectCard from '../components/ProjectCard'
+import CategoryHeader from '../components/CategoryHeader'
 
 const Section = styled.section`
   margin: ${({ theme }) => theme.spacing.xlarge} 0;
-`;
+`
 
 const Heading = styled.h2`
   text-transform: capitalize;
-`;
+`
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-`;
+`
 
 const ReSpace = ({ data }) => {
   const subCategories = {
-    collections: delve(data.collections, "edges"),
-    collaborations: delve(data.collaborations, "edges"),
-    exhibitions: delve(data.exhibitions, "edges")
-  };
+    collections: delve(data.collections, 'edges'),
+    collaborations: delve(data.collaborations, 'edges'),
+    exhibitions: delve(data.exhibitions, 'edges')
+  }
 
   return (
     <Fragment>
@@ -47,19 +47,19 @@ const ReSpace = ({ data }) => {
                   {subCategories[cat].map(({ node }) => {
                     return (
                       <ProjectCard node={node} key={node.frontmatter.title} />
-                    );
+                    )
                   })}
                 </Wrapper>
               </Section>
             )
-          );
+          )
         }
       })}
     </Fragment>
-  );
-};
+  )
+}
 
-export default ReSpace;
+export default ReSpace
 
 export const ProjectFragment = graphql`
   fragment ProjectFragment on MarkdownRemarkEdge {
@@ -83,7 +83,7 @@ export const ProjectFragment = graphql`
       }
     }
   }
-`;
+`
 
 export const pageQuery = graphql`
   query ReCoutureProjects {
@@ -109,4 +109,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
