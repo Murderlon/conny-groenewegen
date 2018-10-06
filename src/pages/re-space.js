@@ -5,9 +5,12 @@ import ProjectCard from '../components/ProjectCard'
 import CategoryHeader from '../components/CategoryHeader'
 
 const Wrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: ${({ theme }) => theme.spacing.large};
+  align-items: end;
+  margin: ${({ theme }) => theme.spacing.huge} 0;
 `
 
 const ReSpace = ({ data }) => {

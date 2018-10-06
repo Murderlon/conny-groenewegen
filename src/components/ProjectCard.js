@@ -8,18 +8,6 @@ import ArrowIcon from '../icons/arrow.svg'
 const Article = styled.article`
   border: 2px solid ${({ theme }) => theme.white};
   border-radius: 3px;
-  margin: ${({ theme }) => theme.spacing.medium} 0;
-  flex: 1 1 100%;
-  align-self: flex-start;
-
-  &:first-of-type,
-  &:nth-of-type(2) {
-    align-self: flex-end;
-  }
-
-  @media (min-width: 40em) {
-    flex: 0 1 47%;
-  }
 
   h2 {
     font-family: 'IBM Plex Mono', mono;
@@ -33,8 +21,8 @@ const Article = styled.article`
     font-size: 1em;
 
     svg {
-      width: 25px;
-      height: 25px;
+      width: 20px;
+      height: 20px;
       margin-left: ${({ theme }) => theme.spacing.small};
     }
   }
