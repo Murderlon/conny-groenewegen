@@ -32,10 +32,7 @@ export default function Template({ data }) {
       </ReturnLink>
       <h1>{title}</h1>
 
-      <Image
-        sizes={headerImage.src.childImageSharp.sizes}
-        alt={headerImage.alt}
-      />
+      <Image sizes={headerImage.src.childImageSharp.sizes} />
       {description && <p>{description}</p>}
 
       <ImageGrid>
