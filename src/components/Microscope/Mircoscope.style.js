@@ -7,6 +7,7 @@ import ControlIcon from '../../icons/microscope.svg'
 
 export const Div = styled.div`
   position: relative;
+  overflow: hidden;
 `
 
 export const Title = styled.h1`
@@ -106,28 +107,34 @@ export const CircleWrapper = styled.div`
 
   div:first-of-type {
     top: 12rem;
-    right: 12rem;
+    right: 13rem;
     animation: ${float} 10s infinite linear;
 
     @media (min-width: 40em) {
+      top: 14rem;
       right: 17rem;
     }
   }
 
   div:nth-of-type(2) {
-    top: 0;
-    right: 0;
+    top: 2.5rem;
+    right: 13rem;
     animation: ${float} 14s infinite linear;
+
+    @media (min-width: 40em) {
+      top: 4rem;
+      right: 16rem;
+    }
   }
 
   div:last-of-type {
-    top: 0;
-    left: 20rem;
+    top: 8rem;
+    right: 1rem;
     animation: ${float} 5s infinite linear;
 
     @media (min-width: 40em) {
-      top: 17rem;
-      right: 14rem;
+      top: 10rem;
+      right: 1rem;
     }
   }
 `
