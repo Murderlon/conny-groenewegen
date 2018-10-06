@@ -3,25 +3,14 @@ import styled, { withTheme } from 'styled-components'
 import { Helmet } from 'react-helmet'
 
 import ReturnLink from '../components/ReturnLink'
-// import MediaButton from '../components/MediaButton'
 
 const Heading = styled.h1`
   text-transform: uppercase;
   font-weight: 700;
 `
 
-// const MediaWrapper = styled.section`
-//   display: flex;
-//   flex-wrap: wrap;
-//   align-items: flex-start;
-
-//   a {
-//     margin: ${({ theme }) => theme.spacing.medium} 0;
-//     margin-right: ${({ theme }) => theme.spacing.medium};
-//   }
-// `
-
 const About = ({ data }) => {
+  const { html } = data.markdownRemark
   return (
     <Fragment>
       <Helmet>
@@ -29,7 +18,7 @@ const About = ({ data }) => {
       </Helmet>
       <ReturnLink to="/">Overview</ReturnLink>
       <Heading>About</Heading>
-      <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+      <div dangerouslySetInnerHTML={{ __html: html }} />
     </Fragment>
   )
 }
