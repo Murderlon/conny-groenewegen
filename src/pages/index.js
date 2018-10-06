@@ -20,7 +20,7 @@ const LayoutWrapper = styled.div`
 `
 
 const MicroscopeWrapper = styled.div`
-  margin: ${({theme}) => theme.spacing.enormous} auto;
+  margin: ${({ theme }) => theme.spacing.enormous} auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -82,16 +82,15 @@ class Index extends Component {
         </MicroscopeWrapper>
 
         <Article>
-          <h2>Collectives</h2>
           <LayoutWrapper>
             <Section>
               <MaskedVideo src={fama} />
               <div>
                 <h3>FaMa</h3>
                 <p>
-                  Fashion Machine (FaMa) is commenting on and asking critical
-                  questions about the (waste) production of the worldwide
-                  clothing industry.
+                  Fashion Machine questions the machinery behind the fast
+                  fashion industry and its consequences for our environment and
+                  us.
                 </p>
                 <Button to="http://fashionmachine.org/">go to website</Button>
               </div>
@@ -99,11 +98,8 @@ class Index extends Component {
             <Section>
               <MaskedVideo src={electricco} />
               <div>
-                <h3>Electric Co.</h3>
-                <p>
-                  Process driven research revealing the constructive potential
-                  of soft tech materials.
-                </p>
+                <h3>ELECTRIC CO</h3>
+                <p>3D soft tech knitwear designs</p>
                 <Button to="https://electricco.co/">go to website</Button>
               </div>
             </Section>

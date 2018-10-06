@@ -10,7 +10,12 @@ const Article = styled.article`
   border-radius: 3px;
   margin: ${({ theme }) => theme.spacing.medium} 0;
   flex: 1 1 100%;
-  align-self: center;
+  align-self: flex-start;
+
+  &:first-of-type,
+  &:nth-of-type(2) {
+    align-self: flex-end;
+  }
 
   @media (min-width: 40em) {
     flex: 0 1 47%;
@@ -26,14 +31,11 @@ const Article = styled.article`
     margin: 0;
     border-bottom: 2px solid ${({ theme }) => theme.white};
     font-size: 1em;
-  }
-  div {
-    height: 15em;
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    svg {
+      width: 25px;
+      height: 25px;
+      margin-left: ${({ theme }) => theme.spacing.small};
     }
   }
 `
@@ -47,7 +49,10 @@ const ProjectCard = ({ node }) => {
           {title} <ArrowIcon />
         </h2>
         <div>
-          <Image sizes={headerImage.src.childImageSharp.sizes} />
+          <Image
+            sizes={headerImage.src.childImageSharp.sizes}
+            alt={headerImage.alt}
+          />
         </div>
       </GatbyLink>
     </Article>

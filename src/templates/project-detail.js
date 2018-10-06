@@ -5,13 +5,14 @@ import styled from 'styled-components'
 import ReturnLink from '../components/ReturnLink'
 
 const ImageGrid = styled.section`
-  display: flex;
-  flex-direction: column;
-  margin: ${({ theme }) => theme.spacing.large} 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: ${({ theme }) => theme.spacing.small};
 `
 
 const Img = styled(Image)`
-  margin: ${({ theme }) => theme.spacing.small} 0;
+  align-self: center;
+  justify-self: center;
 `
 
 export default function Template({ data }) {
@@ -32,14 +33,19 @@ export default function Template({ data }) {
       </ReturnLink>
       <h1>{title}</h1>
 
-      <Image sizes={headerImage.src.childImageSharp.sizes} />
+      <Image
+        sizes={headerImage.src.childImageSharp.sizes}
+        alt={headerImage.alt}
+      />
       {description && <p>{description}</p>}
 
-      <ImageGrid>
-        {images.map(({ src, alt }, i) => (
-          <Img key={i} sizes={src.childImageSharp.sizes} alt={alt} />
-        ))}
-      </ImageGrid>
+      {images.length > 0 && (
+        <ImageGrid>
+          {images.map(({ src, alt }, i) => (
+            <Img key={i} sizes={src.childImageSharp.sizes} alt={alt} />
+          ))}
+        </ImageGrid>
+      )}
     </Fragment>
   )
 }
@@ -55,7 +61,6 @@ export const pageQuery = graphql`
           src {
             childImageSharp {
               sizes(maxWidth: 1000) {
-                originalName
                 ...GatsbyImageSharpSizes
               }
             }
@@ -67,7 +72,6 @@ export const pageQuery = graphql`
           src {
             childImageSharp {
               sizes(maxWidth: 1000) {
-                originalName
                 ...GatsbyImageSharpSizes
               }
             }

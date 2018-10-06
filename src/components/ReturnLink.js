@@ -8,6 +8,7 @@ const Link = styled(GatbyLink)`
   font-family: 'IBM Plex Mono', mono;
   font-weight: 400;
   display: block;
+  text-transform: uppercase;
   margin-bottom: ${({ theme }) => theme.spacing.small};
 
   svg {
