@@ -40,12 +40,26 @@ collections:
             ],
         }
       - { name: description, label: Project description, widget: text }
+      - {
+          name: vimeoID,
+          label: Vimeo ID,
+          widget: string,
+          required: false,
+          default: '',
+        }
+      - { name: 'body', label: 'Project description', widget: 'markdown' }
       - label: Images
         name: images
+        required: false
         widget: list
         fields:
-          - { label: file, name: image, widget: image }
-          - { label: alternative text description, name: alt, widget: string }
+          - { label: file, name: image, widget: image, required: true }
+          - {
+              label: alternative text description,
+              name: alt,
+              widget: string,
+              required: true,
+            }
 
   - name: re-space
     label: Re-Space
@@ -77,12 +91,26 @@ collections:
             ],
         }
       - { name: description, label: Project description, widget: text }
+      - {
+          name: vimeoID,
+          label: Vimeo ID,
+          widget: string,
+          required: false,
+          default: '',
+        }
+      - { name: 'body', label: 'Project description', widget: 'markdown' }
       - label: Images
         name: images
+        required: false
         widget: list
         fields:
-          - { label: file, name: image, widget: image }
-          - { label: alternative text description, name: alt, widget: string }
+          - { label: file, name: image, widget: image, required: true }
+          - {
+              label: alternative text description,
+              name: alt,
+              widget: string,
+              required: true,
+            }
 
   - name: 'pages'
     label: 'Pages'

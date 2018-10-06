@@ -50,6 +50,7 @@ description: >-
   Video: Marit Geluk
 
   Photography: Johannes Schwartz, Ralph Vaessen
+vimeoID: ''
 images:
   - alt: Fashion Machine 2015-16
     image: /assets/01-fleece-collection-station.jpg
@@ -62,4 +63,3 @@ images:
   - alt: Fashion Machine 2015-16
     image: /assets/6-red-fleece-knitting-statiion-2.jpg
 ---
-

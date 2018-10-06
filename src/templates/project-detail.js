@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import Image from 'gatsby-image'
 import styled from 'styled-components'
+import ReactVimeoOembed from 'react-vimeo-oembed'
 
 import ReturnLink from '../components/ReturnLink'
 
@@ -20,6 +21,7 @@ export default function Template({ data }) {
     title,
     headerImage,
     description,
+    vimeoID,
     images
   } = data.markdownRemark.frontmatter
   const parent = id =>
@@ -39,13 +41,28 @@ export default function Template({ data }) {
       />
       {description && <p>{description}</p>}
 
-      {images.length > 0 && (
-        <ImageGrid>
-          {images.map(({ src, alt }, i) => (
-            <Img key={i} sizes={src.childImageSharp.sizes} alt={alt} />
-          ))}
-        </ImageGrid>
+      {vimeoID && (
+        <ReactVimeoOembed
+          videoId={vimeoID}
+          style={{ width: '100%' }}
+          options={{
+            'max-width': 1000,
+            'max-height': 300,
+            title: false,
+            portrait: false,
+            byline: false
+          }}
+        />
       )}
+
+      {images &&
+        images.length > 0 && (
+          <ImageGrid>
+            {images.map(({ src, alt }, i) => (
+              <Img key={i} sizes={src.childImageSharp.sizes} alt={alt} />
+            ))}
+          </ImageGrid>
+        )}
     </Fragment>
   )
 }
@@ -67,6 +84,7 @@ export const pageQuery = graphql`
           }
         }
         description
+        vimeoID
         images {
           alt
           src {

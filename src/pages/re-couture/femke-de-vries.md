@@ -45,6 +45,7 @@ description: >
   Designed by: Hans Gremmen and Corine van der Wal
 
   Photography: Sanne van den Elzen
+vimeoID: ''
 images:
   - alt: Femke de Vries
     image: /assets/02-dsc2854svde.jpg
@@ -55,4 +56,3 @@ images:
   - alt: Femke de Vries
     image: /assets/05-dd-at-onomatopee.jpg
 ---
-

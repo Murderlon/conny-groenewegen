@@ -19,6 +19,10 @@ const base = css`
     font-size: 17px;
   }
 
+  iframe {
+    width: 100%;
+  }
+
   /**
  * Add the correct display in browsers that don't support HTML5 elements by default.
  */

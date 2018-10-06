@@ -10,9 +10,9 @@ description: |-
 
   Exhibition by Malkit Soshan
 
-  Development and execution of knotted Dovecote 
+  Development and execution of knotted Dovecote
+vimeoID: ''
 images:
   - alt: 'Zoo, Bureau Europa'
     image: /assets/malkit-soshan-nhi-maastricht.jpg
 ---
-

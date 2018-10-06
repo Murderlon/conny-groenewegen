@@ -14,6 +14,7 @@ description: >-
 
   With thanks to: Droog Design, Eric von Robertson, Corine Datema (graphic
   design)
+vimeoID: ''
 images:
   - alt: Rupture
     image: /assets/02-dscf0121.jpg
@@ -32,4 +33,3 @@ images:
   - alt: Rupture
     image: /assets/09-showrupture3.jpg
 ---
-

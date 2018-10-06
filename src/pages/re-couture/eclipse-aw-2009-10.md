@@ -6,6 +6,7 @@ headerImage:
   alt: Eclipse AW 2009-10
   image: /assets/01-dff_f09_groenewegen_003.jpg
 description: Eclipse AW 2009-10
+vimeoID: '258238541'
 images:
   - alt: Eclipse AW 2009-10
     image: /assets/01-dff_f09_groenewegen_003.jpg
@@ -44,4 +45,3 @@ images:
   - alt: Eclipse AW 2009-10
     image: /assets/20-dff_f09_groenewegen_025.jpg
 ---
-

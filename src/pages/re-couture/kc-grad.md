@@ -21,8 +21,8 @@ description: >-
   into the modern era themed around the craftsmanship techniques from the
   Balkans. Project Exploring Inspirations is supported by Creative Industries
   Fund Netherlands.
+vimeoID: ''
 images:
   - alt: KC Grad
     image: /assets/05img_7888b.jpg
 ---
-
