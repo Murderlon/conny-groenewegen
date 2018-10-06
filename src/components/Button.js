@@ -7,6 +7,7 @@ const Link = styled(GatsbyLink)`
   border: 1px solid ${({ theme }) => theme.white};
   border-radius: 3px;
   font-family: 'IBM Plex Mono', mono;
+  font-size: 0.8em;
   text-transform: uppercase;
   display: inline-block;
 `
