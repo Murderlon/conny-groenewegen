@@ -1,8 +1,9 @@
-import React from 'react'
+import React from "react";
 
-import Arrow from '../../icons/arrow.svg'
+import Arrow from "../../icons/arrow.svg";
 
 import {
+  Div,
   Title,
   Wrapper,
   Image,
@@ -11,12 +12,12 @@ import {
   Category,
   Button,
   MicroscopeControlIcon
-} from './Mircoscope.style'
+} from "./Mircoscope.style";
 
 const Microscope = ({ image, categories, activeCategory, color, onChange }) => (
-  <div>
+  <Div>
     <Title color={color}>
-      Re-
+      RE-
       <span>{activeCategory}</span>
     </Title>
     <Wrapper>
@@ -51,10 +52,10 @@ const Microscope = ({ image, categories, activeCategory, color, onChange }) => (
             />
             <label htmlFor={value}>{label}</label>
           </Category>
-        )
+        );
       })}
     </ControlsForm>
-  </div>
-)
+  </Div>
+);
 
-export default Microscope
+export default Microscope;

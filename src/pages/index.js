@@ -1,23 +1,23 @@
-import React, { Fragment, Component } from 'react'
-import styled, { withTheme } from 'styled-components'
+import React, { Fragment, Component } from "react";
+import styled, { withTheme } from "styled-components";
 
-import Microscope from '../components/Microscope/Microscope'
-import Button from '../components/Button'
-import MaskedVideo from '../components/MaskedVideo'
+import Microscope from "../components/Microscope/Microscope";
+import Button from "../components/Button";
+import MaskedVideo from "../components/MaskedVideo";
 
-import fama from '../images/fama.mp4'
-import electricco from '../images/electricco.mp4'
+import fama from "../images/fama.mp4";
+import electricco from "../images/electricco.mp4";
 
 const Article = styled.article`
   margin: 0 auto;
   max-width: 65em;
-`
+`;
 
 const LayoutWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-`
+`;
 
 const MicroscopeWrapper = styled.div`
   margin: ${({ theme }) => theme.spacing.enormous} auto;
@@ -29,7 +29,7 @@ const MicroscopeWrapper = styled.div`
   @media (min-width: 40em) {
     align-items: center;
   }
-`
+`;
 
 const Section = styled.section`
   display: flex;
@@ -38,37 +38,37 @@ const Section = styled.section`
   @media (min-width: 50em) {
     max-width: 25em;
   }
-`
+`;
 
 class Index extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.colors = {
-      space: this.props.theme.magenta,
-      couture: this.props.theme.yellow,
-      materialize: this.props.theme.cyan
-    }
+      space: this.props.theme.spaceColor,
+      couture: this.props.theme.coutureColor,
+      materialize: this.props.theme.materializeColor
+    };
     this.state = {
       categories: [
-        { label: 'Space', name: 'category', value: 'space' },
-        { label: 'Couture', name: 'category', value: 'couture' },
-        { label: 'Materialize', name: 'category', value: 'materialize' }
+        { label: "Space", name: "category", value: "space" },
+        { label: "Couture", name: "category", value: "couture" },
+        { label: "Materialize", name: "category", value: "materialize" }
       ],
-      active: { category: 'couture', color: this.props.theme.yellow }
-    }
+      active: { category: "couture", color: this.props.theme.red }
+    };
   }
 
   handleCategoryChange = ({ target }) => {
     if (target.value !== this.state.active.category) {
       return this.setState({
         active: { category: target.value, color: this.colors[target.value] }
-      })
+      });
     }
-  }
+  };
 
   render() {
-    const { data } = this.props
-    const { category, color } = this.state.active
+    const { data } = this.props;
+    const { category, color } = this.state.active;
     return (
       <Fragment>
         <MicroscopeWrapper>
@@ -106,7 +106,7 @@ class Index extends Component {
           </LayoutWrapper>
         </Article>
       </Fragment>
-    )
+    );
   }
 }
 
@@ -118,7 +118,7 @@ export const GatsbyImageFragment = graphql`
       }
     }
   }
-`
+`;
 
 export const query = graphql`
   query images {
@@ -134,6 +134,6 @@ export const query = graphql`
       ...GatsbyImageFragment
     }
   }
-`
+`;
 
-export default withTheme(Index)
+export default withTheme(Index);

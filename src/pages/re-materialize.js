@@ -1,12 +1,12 @@
-import React, { Fragment } from 'react'
-import Img from 'gatsby-image'
-import styled from 'styled-components'
+import React, { Fragment } from "react";
+import Img from "gatsby-image";
+import styled from "styled-components";
 
-import CategoryHeader from '../components/CategoryHeader'
+import CategoryHeader from "../components/CategoryHeader";
 
 const Image = styled(Img)`
   z-index: -1;
-`
+`;
 
 const Article = styled.article`
   div:nth-child(2) > div:nth-of-type(2),
@@ -15,12 +15,12 @@ const Article = styled.article`
     border: 2px solid ${p => p.theme.black};
     color: ${p => p.theme.black};
   }
-`
+`;
 
 const Wrapper = styled.div`
   position: relative;
   margin: ${p => p.theme.spacing.huge} 0;
-`
+`;
 
 const Element = styled.div`
   position: absolute;
@@ -48,27 +48,27 @@ const Element = styled.div`
     margin: 0;
     font-size: 1em;
   }
-`
+`;
 
 const ReMaterialize = ({ data }) => {
   const content = {
     Tania:
-      'Felted knit in wool/angora/silk yarn partly and seamlessly layered with a fine woven silk satin.',
+      "Felted knit in wool/angora/silk yarn partly and seamlessly layered with a fine woven silk satin.",
     Gerlinde:
-      'Felted knit in wool/angora/silk yarn partly and seamlessly layered with a fine woven silk satin.',
-    Octavie: 'Striped and felted knit in wool/angora and cotton.',
-    Renata: 'Structure knit in retro-reflective yarn with glass microbeads.',
-    Mimas: 'Analine leather surface connected to a layer of hand knit wool.',
+      "Felted knit in wool/angora/silk yarn partly and seamlessly layered with a fine woven silk satin.",
+    Octavie: "Striped and felted knit in wool/angora and cotton.",
+    Renata: "Structure knit in retro-reflective yarn with glass microbeads.",
+    Mimas: "Analine leather surface connected to a layer of hand knit wool.",
     Aimee:
-      'Felted wool/angora and silk knit with bubbly and soft hairy surface',
+      "Felted wool/angora and silk knit with bubbly and soft hairy surface",
     Krystyna:
-      'Felted wool/angora knit with a layer of silk organza which seamlessly merges into a singular semi-transparent organza fabric.',
+      "Felted wool/angora knit with a layer of silk organza which seamlessly merges into a singular semi-transparent organza fabric.",
     Kay:
-      'Felted wool/angora knit with a layer of silk organza resulting in light organza ruffles at the hem.'
-  }
+      "Felted wool/angora knit with a layer of silk organza resulting in light organza ruffles at the hem."
+  };
   return (
     <Fragment>
-      <CategoryHeader title="materialize" color="cyan">
+      <CategoryHeader title="Materialize" color="materializeColor">
         <p>
           My research traces back to the origins of methods. Peeling off tired
           layers of self-evidence to find a sparkle of unexpected material
@@ -87,12 +87,12 @@ const ReMaterialize = ({ data }) => {
               </Element>
               <p>{content[key]}</p>
             </Wrapper>
-          )
+          );
         })}
       </Article>
     </Fragment>
-  )
-}
+  );
+};
 
 export const MaterializeImageFragment = graphql`
   fragment MaterializeImageFragment on File {
@@ -102,7 +102,7 @@ export const MaterializeImageFragment = graphql`
       }
     }
   }
-`
+`;
 
 export const query = graphql`
   query MaterializeImages {
@@ -131,6 +131,6 @@ export const query = graphql`
       ...MaterializeImageFragment
     }
   }
-`
+`;
 
-export default ReMaterialize
+export default ReMaterialize;

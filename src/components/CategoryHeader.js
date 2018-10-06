@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react'
-import styled from 'styled-components'
-import { Helmet } from 'react-helmet'
+import React, { Fragment } from "react";
+import styled from "styled-components";
+import { Helmet } from "react-helmet";
 
-import ReturnLink from '../components/ReturnLink'
+import ReturnLink from "../components/ReturnLink";
 
 const Heading = styled.h1`
   text-transform: uppercase;
@@ -10,8 +10,9 @@ const Heading = styled.h1`
 
   span {
     color: ${({ theme, color }) => theme[color]};
+    text-transform: capitalize;
   }
-`
+`;
 
 const CategoryHeader = ({ title, color, children }) => {
   return (
@@ -29,7 +30,7 @@ const CategoryHeader = ({ title, color, children }) => {
       </Heading>
       {children}
     </Fragment>
-  )
-}
+  );
+};
 
-export default CategoryHeader
+export default CategoryHeader;

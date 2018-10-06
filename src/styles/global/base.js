@@ -1,5 +1,5 @@
-import { css } from 'styled-components'
-import { black, white, grey } from '../themes/colors'
+import { css } from "styled-components";
+import { black, white, grey } from "../themes/colors";
 
 const base = css`
   html {
@@ -73,6 +73,6 @@ const base = css`
     border: 0;
     color: inherit;
   }
-`
+`;
 
-export default base
+export default base;
