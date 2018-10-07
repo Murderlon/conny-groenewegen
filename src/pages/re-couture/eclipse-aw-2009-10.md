@@ -6,7 +6,7 @@ headerImage:
   alt: Eclipse AW 2009-10
   image: /assets/01-dff_f09_groenewegen_003.jpg
 description: Eclipse AW 2009-10
-vimeoID: '258238541'
+vimeoID: ''
 images:
   - alt: Eclipse AW 2009-10
     image: /assets/01-dff_f09_groenewegen_003.jpg
