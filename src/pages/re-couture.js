@@ -15,13 +15,15 @@ const Heading = styled.h2`
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
   grid-gap: ${({ theme }) => theme.spacing.large};
-  align-items: end;
 
-  article:last-of-type {
-    align-self: start;
+  @media (min-width: 30em) {
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+
+    article:last-of-type {
+      align-self: start;
+    }
   }
 `
 

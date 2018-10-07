@@ -6,14 +6,16 @@ import CategoryHeader from '../components/CategoryHeader'
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
   grid-gap: ${({ theme }) => theme.spacing.large};
-  align-items: end;
   margin: ${({ theme }) => theme.spacing.huge} 0;
 
-  article:last-of-type {
-    align-self: start;
+  @media (min-width: 30em) {
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+
+    article:last-of-type {
+      align-self: start;
+    }
   }
 `
 
