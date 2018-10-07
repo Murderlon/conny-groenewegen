@@ -7,7 +7,8 @@ import ControlIcon from '../../icons/microscope.svg'
 
 export const Div = styled.div`
   position: relative;
-  @media (max-width: 20em) {
+
+  @media (max-width: 25em) {
     overflow: hidden;
   }
 `
