@@ -10,7 +10,7 @@ const Heading = styled.h1`
 
   span {
     color: ${({ theme, color }) => theme[color]};
-    text-transform: capitalize;
+    text-transform: lowercase;
   }
 `
 

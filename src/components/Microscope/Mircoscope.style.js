@@ -26,8 +26,6 @@ export const Title = styled.h1`
 
   span {
     color: ${({ color }) => color};
-    text-transform: capitalize;
-    display: inline-block;
   }
 `
 
