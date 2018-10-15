@@ -20,7 +20,6 @@ export default function Template({ data }) {
   const {
     title,
     headerImage,
-    description,
     vimeoID,
     images
   } = data.markdownRemark.frontmatter
@@ -39,7 +38,10 @@ export default function Template({ data }) {
         sizes={headerImage.src.childImageSharp.sizes}
         alt={headerImage.alt}
       />
-      {description && <p>{description}</p>}
+
+      {data.markdownRemark.html && (
+        <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+      )}
 
       {vimeoID && (
         <ReactVimeoOembed
@@ -71,6 +73,7 @@ export const pageQuery = graphql`
   query ProjectPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
+      html
       frontmatter {
         title
         headerImage {
@@ -83,7 +86,6 @@ export const pageQuery = graphql`
             }
           }
         }
-        description
         vimeoID
         images {
           alt

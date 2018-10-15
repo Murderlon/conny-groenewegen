@@ -5,7 +5,6 @@ title: 'We Are Muze: Lisette 2016'
 headerImage:
   alt: 'We Are Muze: Lisette 2016'
   image: /assets/01-wam_henriverhoef-2.jpg
-description: "LISETTE\nFor 7 hours, performance artist Lisette Ros dressed up, wore and experienced different items of clothing from diverse designers.\LWe challenged her to undergo the various effects of this. The result was a switch between individual personages.\LThese outfits directly changed Lisette’s behaviour, mood, do’s and don’ts and focus,\Las she encountered altered emotions with in herself.\n\nPerformance artist – Lisette Ros \_ Photography – Henri Verhoef\LCreative direction & concept – Conny Groenewegen\nStyling – Robert Risteski\nIn collaboration with/ for We Are Muze – Jessica Joyce, LoveLuha, BYBROWN, Vanderwilt, ELECTRIC CO\n\nVIDEO – Thijs Adriaans\n"
 vimeoID: ''
 images:
   - alt: 'We Are Muze: Lisette 2016'
@@ -17,13 +16,14 @@ images:
   - alt: 'We Are Muze: Lisette 2016'
     image: /assets/04-wam_henriverhoef-11.jpg
 ---
+
 LISETTE
 
 For 7 hours, performance artist Lisette Ros dressed up, wore and experienced different items of clothing from diverse designers. We challenged her to undergo the various effects of this. The result was a switch between individual personages. These outfits directly changed Lisette’s behaviour, mood, do’s and don’ts and focus, as she encountered altered emotions with in herself.
 
-Performance artist – Lisette Ros   
+Performance artist – Lisette Ros
 
-Photography – Henri Verhoef 
+Photography – Henri Verhoef
 
 Creative direction & concept – Conny Groenewegen
 

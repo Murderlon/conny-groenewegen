@@ -39,7 +39,7 @@ collections:
               },
             ],
         }
-      - { name: description, label: Project description, widget: text }
+      - { name: 'body', label: 'Project description', widget: 'markdown' }
       - {
           name: vimeoID,
           label: Vimeo ID,
@@ -47,7 +47,6 @@ collections:
           required: false,
           default: '',
         }
-      - { name: 'body', label: 'Project description', widget: 'markdown' }
       - label: Images
         name: images
         required: false
@@ -90,7 +89,7 @@ collections:
               },
             ],
         }
-      - { name: description, label: Project description, widget: text }
+      - { name: 'body', label: 'Project description', widget: 'markdown' }
       - {
           name: vimeoID,
           label: Vimeo ID,
@@ -98,7 +97,6 @@ collections:
           required: false,
           default: '',
         }
-      - { name: 'body', label: 'Project description', widget: 'markdown' }
       - label: Images
         name: images
         required: false
