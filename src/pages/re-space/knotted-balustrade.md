@@ -24,3 +24,10 @@ images:
   - alt: Knotted Balustrade
     image: /assets/_07-hw_6116-proto4v.jpg
 ---
+Opdrachtgever: EeStairs
+
+Fotografie: Hessel Waalewijn
+
+Met dank aan: Frans-Pieter Vonck, Allplast
+
+Supported by: Provincie Gelderland
