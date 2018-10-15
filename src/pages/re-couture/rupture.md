@@ -33,3 +33,8 @@ images:
   - alt: Rupture
     image: /assets/09-showrupture3.jpg
 ---
+RUPTURE
+
+Exhibition and show (2007) of the RUPTURE collection at Droog gallery, Amsterdam. 
+
+With thanks to: Droog Design, Eric von Robertson, Corine Datema (graphic design)
