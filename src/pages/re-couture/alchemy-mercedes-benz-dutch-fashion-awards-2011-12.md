@@ -5,7 +5,39 @@ title: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
 headerImage:
   alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
   image: /assets/01-nugget-coat.jpg
-description: "ALCHEMY, AUTUMN/WINTER 2012/13\n\nThe Autumn/Winter 2012/13 collection is inspired by ‘alchemy’ and the mysterious transformations that colour our mind, body and spirit. Each intarsia knit garment is processed with a hot\_dye that changes color and character of used\_materials like wool, wild silk and copper. This ‘alchemical process’ which allows to integrate and\_define the shape for each design resulted in a\_fascinating balance between traditional\_craftsmanship and innovation.\n\nExtra: Mercedes-Benz Dutch Fashion Award winner —2011\n“The jury was instantly and unanimously convinced by the artistic integrity of this designer who provides the fashion industry with much needed oxygen” Mrs. Fabiana Giacomotti, the Editor-in-chief of Fashion Illustrated, and Mr. Armand Hadida, owner of L’Eclaireur and Tranoï in Paris declared about the winning designer Conny Groenewegen, on behalf of the entire jury.\n\nPhotography: Peter Stigter \n\n\nBeeldbehandeling:\nPer twee op volgorde van numbering\nBehalve 11, 12, 13 naast elkaar"
+description: >-
+  ALCHEMY, AUTUMN/WINTER 2012/13
+
+
+  The Autumn/Winter 2012/13 collection is inspired by ‘alchemy’ and the
+  mysterious transformations that colour our mind, body and spirit. Each
+  intarsia knit garment is processed with a hot dye that changes color and
+  character of used materials like wool, wild silk and copper. This ‘alchemical
+  process’ which allows to integrate and define the shape for each design
+  resulted in a fascinating balance between traditional craftsmanship and
+  innovation.
+
+
+  Extra: Mercedes-Benz Dutch Fashion Award winner —2011
+
+
+  “The jury was instantly and unanimously convinced by the artistic integrity of
+  this designer who provides the fashion industry with much needed oxygen” Mrs.
+  Fabiana Giacomotti, the Editor-in-chief of Fashion Illustrated, and Mr. Armand
+  Hadida, owner of L’Eclaireur and Tranoï in Paris declared about the winning
+  designer Conny Groenewegen, on behalf of the entire jury.
+
+
+  Photography: Peter Stigter
+
+
+  Beeldbehandeling:
+
+
+  Per twee op volgorde van numbering
+
+
+  Behalve 11, 12, 13 naast elkaar
 vimeoID: ''
 images:
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
@@ -53,3 +85,12 @@ images:
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
     image: /assets/21-lightness-gown.jpg
 ---
+ALCHEMY, AUTUMN/WINTER 2012/13
+
+The Autumn/Winter 2012/13 collection is inspired by ‘alchemy’ and the mysterious transformations that colour our mind, body and spirit. Each intarsia knit garment is processed with a hot dye that changes color and character of used materials like wool, wild silk and copper. This ‘alchemical process’ which allows to integrate and define the shape for each design resulted in a fascinating balance between traditional craftsmanship and innovation.
+
+Extra: Mercedes-Benz Dutch Fashion Award winner —2011
+
+“The jury was instantly and unanimously convinced by the artistic integrity of this designer who provides the fashion industry with much needed oxygen” Mrs. Fabiana Giacomotti, the Editor-in-chief of Fashion Illustrated, and Mr. Armand Hadida, owner of L’Eclaireur and Tranoï in Paris declared about the winning designer Conny Groenewegen, on behalf of the entire jury.
+
+Photography: Peter Stigter
