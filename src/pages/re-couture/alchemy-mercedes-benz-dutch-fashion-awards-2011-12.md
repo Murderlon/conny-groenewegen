@@ -16,8 +16,6 @@ images:
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
     image: /assets/04-carbon-coat-2b.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
-    image: /assets/04-carbon-coat-2b.jpg
-  - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
     image: /assets/05-shadow-gown.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
     image: /assets/06-shadow-gown.jpg
