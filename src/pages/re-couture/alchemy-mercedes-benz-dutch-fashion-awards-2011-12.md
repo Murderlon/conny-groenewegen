@@ -32,8 +32,6 @@ images:
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
     image: /assets/12-dfa_11_groenewegen_0289b.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
-    image: ''
-  - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
     image: /assets/14-blue-tone-gownb.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
     image: /assets/15-blue-tone-gownbb.jpg
