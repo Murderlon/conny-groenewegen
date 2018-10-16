@@ -12,7 +12,7 @@ images:
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
     image: /assets/02-nugget-coat.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
-    image: /assets/03-carbon-coat-0bb.jpg
+    image: /assets/03-carbon-coat-0bbb.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
     image: /assets/04-carbon-coat-2b.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
