@@ -12,39 +12,39 @@ images:
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
     image: /assets/02-nugget-coat.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
-    image: /assets/03-carbon-coat-0b.jpg
+    image: /assets/03-carbon-coat-0bb.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
     image: /assets/04-carbon-coat-2b.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
-    image: /assets/05-shadow-gown.jpg
+    image: /assets/05-shadow-gownb.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
     image: /assets/06-shadow-gown.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
     image: /assets/07-copper-crepe-dressb.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
-    image: /assets/08-copper-crepe-dress-2.jpg
+    image: /assets/08-copper-crepe-dress-2b.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
-    image: /assets/09-gold-carbon-dressb.jpg
+    image: /assets/09-gold-carbon-dressbb.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
-    image: /assets/10-gold-carbon-dressb.jpg
+    image: /assets/10-gold-carbon-dressbb.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
-    image: /assets/11-dfa_11_groenewegen_0271.jpg
+    image: /assets/11-dfa_11_groenewegen_0271b.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
-    image: /assets/12-dfa_11_groenewegen_0289.jpg
+    image: /assets/12-dfa_11_groenewegen_0289b.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
     image: /assets/13-dfa_11_groenewegen_0293.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
     image: /assets/14-blue-tone-gownb.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
-    image: /assets/15-blue-tone-gownb.jpg
+    image: /assets/15-blue-tone-gownbb.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
-    image: /assets/16-bluetone-jumper-2.jpg
+    image: /assets/16-bluetone-jumper-2b.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
     image: /assets/17-blue-tone-jumperb.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
-    image: /assets/18-dfa_11_groenewegen_0365.jpg
+    image: /assets/18-dfa_11_groenewegen_0365b.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
-    image: /assets/19-dfa_11_groenewegen_0376.jpg
+    image: /assets/19-dfa_11_groenewegen_0376b.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
     image: /assets/20-lightness-gown-1.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
