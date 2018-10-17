@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import Image from 'gatsby-image'
 import styled from 'styled-components'
 import ReactVimeoOembed from 'react-vimeo-oembed'
+import delve from 'dlv'
 
 import ReturnLink from '../components/ReturnLink'
 
@@ -60,9 +61,12 @@ export default function Template({ data }) {
       {images &&
         images.length > 0 && (
           <ImageGrid>
-            {images.map(({ src, alt }, i) => (
-              <Img key={i} sizes={src.childImageSharp.sizes} alt={alt} />
-            ))}
+            {images.map(
+              ({ src, alt }, i) =>
+                delve(src, 'childImageSharp.sizes') && (
+                  <Img key={i} sizes={src.childImageSharp.sizes} alt={alt} />
+                )
+            )}
           </ImageGrid>
         )}
     </Fragment>
