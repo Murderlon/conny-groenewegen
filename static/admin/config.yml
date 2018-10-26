@@ -125,4 +125,11 @@ collections:
               widget: 'hidden',
               default: 'about',
             }
+          - {
+              name: vimeoID,
+              label: Vimeo ID,
+              widget: string,
+              required: false,
+              default: '',
+            }
           - { label: 'Body', name: 'body', widget: 'markdown' }
