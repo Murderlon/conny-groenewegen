@@ -2,8 +2,7 @@
 templateKey: about
 vimeoID: 'https://youtu.be/QJN_8ZCooug'
 ---
-
-![dit ben ik](/assets/01-mg_3461-web.jpg)
+![dit ben ik]()
 
 ## My working method
 
