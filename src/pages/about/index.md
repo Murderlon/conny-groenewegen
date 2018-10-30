@@ -1,6 +1,9 @@
 ---
 templateKey: about
-vimeoID: 'https://youtu.be/QJN_8ZCooug'
+vimeoID: >-
+  <iframe width="560" height="315"
+  src="https://www.youtube.com/embed/QJN_8ZCooug?ecver=1" frameborder="0"
+  allow="autoplay; encrypted-media" allowfullscreen></iframe>
 ---
 ![dit ben ik]()
 
