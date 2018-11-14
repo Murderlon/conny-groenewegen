@@ -10,10 +10,9 @@ images:
   - alt: Salon 2011
     image: /assets/wintertales-2011-hr.jpg
 ---
-
 WINTERTALES
 
-Museum van Loon, Amsterdam, SALON 2011 group exhibition.
+Museum Van Loon, Amsterdam, SALON 2011 group exhibition.
 
 Photography: JW Kaldenbach.
 
