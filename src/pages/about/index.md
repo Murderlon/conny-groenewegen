@@ -2,8 +2,6 @@
 templateKey: about
 vimeoID: '300830443'
 ---
-![dit ben ik]()
-
 ## My working method
 
 an introduction
