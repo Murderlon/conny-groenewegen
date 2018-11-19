@@ -1,6 +1,6 @@
 ---
 templateKey: about
-vimeoID: '300830443'
+vimeoID: ''
 ---
 ## My working method
 
