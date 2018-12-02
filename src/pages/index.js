@@ -46,22 +46,22 @@ class Index extends Component {
     this.colors = {
       space: this.props.theme.spaceColor,
       couture: this.props.theme.coutureColor,
-      materialize: this.props.theme.materializeColor
+      materialize: this.props.theme.materializeColor,
     }
     this.state = {
       categories: [
         { label: 'Space', name: 'category', value: 'space' },
         { label: 'Couture', name: 'category', value: 'couture' },
-        { label: 'Materialize', name: 'category', value: 'materialize' }
+        { label: 'Materialize', name: 'category', value: 'materialize' },
       ],
-      active: { category: 'couture', color: this.props.theme.coutureColor }
+      active: { category: 'couture', color: this.props.theme.coutureColor },
     }
   }
 
   handleCategoryChange = ({ target }) => {
     if (target.value !== this.state.active.category) {
       return this.setState({
-        active: { category: target.value, color: this.colors[target.value] }
+        active: { category: target.value, color: this.colors[target.value] },
       })
     }
   }
@@ -88,9 +88,8 @@ class Index extends Component {
               <div>
                 <h3>FaMa</h3>
                 <p>
-                  Fashion Machine questions the machinery behind the fast
-                  fashion industry and its consequences for our environment and
-                  us.
+                  Fashion Machine questions the consequences of the fast fashion
+                  industry and its impact on our environment
                 </p>
                 <Button to="http://fashionmachine.org/">go to website</Button>
               </div>
