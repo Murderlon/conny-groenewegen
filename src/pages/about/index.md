@@ -1,9 +1,8 @@
 ---
 templateKey: about
-vimeoID: ""
+vimeoID: ''
 ---
-
-![dit ben ik](/assets/01-mg_3461-web.jpg)
+![](/assets/portrait-cg-landscape.jpg)
 
 ## My working method
 
