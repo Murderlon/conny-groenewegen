@@ -34,8 +34,7 @@ const Link = ({ to, children }) => (
   <GatsbyLink
     exact
     to={to}
-    activeStyle={{ textDecoration: 'none', fontWeight: '600' }}
-  >
+    activeStyle={{ textDecoration: 'none', fontWeight: '600' }}>
     {children}
   </GatsbyLink>
 )
@@ -49,10 +48,10 @@ const Footer = () => (
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/re-couture">Re-Couture</Link>
+            <Link to="/re-space">Re-Space</Link>
           </li>
           <li>
-            <Link to="/re-space">Re-Space</Link>
+            <Link to="/re-couture">Re-Couture</Link>
           </li>
           <li>
             <Link to="/re-materialize">Re-Materialize</Link>
