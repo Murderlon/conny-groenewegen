@@ -12,19 +12,19 @@ images:
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
     image: /assets/02-nugget-coat.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
-    image: /assets/03-carbon-coat-0bbb.jpg
+    image: /assets/03-carbon-coat-def.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
     image: /assets/04-carbon-coat-2b.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
-    image: /assets/05-shadow-gownb.jpg
+    image: /assets/05-shadow-gown-def.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
     image: /assets/06-shadow-gown.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
     image: /assets/07-copper-crepe-dressb.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
-    image: /assets/08-copper-crepe-dress-2b.jpg
+    image: /assets/08-copper-crepe-dress-def.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
-    image: /assets/09-gold-carbon-dressbb.jpg
+    image: /assets/09-gold-carbon-dress-def.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
     image: /assets/10-gold-carbon-dressbb.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
@@ -36,7 +36,7 @@ images:
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
     image: /assets/15-blue-tone-gownbb.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
-    image: /assets/16-bluetone-jumper-2b.jpg
+    image: /assets/16-bluetone-jumper-def.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
     image: /assets/17-blue-tone-jumperb.jpg
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
