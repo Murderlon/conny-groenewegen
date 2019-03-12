@@ -6,7 +6,7 @@ headerImage:
   alt: >-
     young woman, straight black haircut, dark red lips, pale skin, dark coloured
     design with wool, copper, silk
-  image: /assets/05-constellation.jpg
+  image: /assets/05-constellation-def.jpg
 vimeoID: ''
 images:
   - alt: >-
