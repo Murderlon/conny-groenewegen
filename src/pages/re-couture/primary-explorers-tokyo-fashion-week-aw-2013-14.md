@@ -32,11 +32,11 @@ images:
   - alt: primary explorers
     image: >-
       /assets/14-conny-groenewegen-2013-14-aw-20130317_027-thumb-500xauto-173633.jpg
-  - alt: primary explorers
-    image: /assets/15-conny-086.jpg
   - alt: azian model in body hugging reflective knitted strapless suit
     image: >-
       /assets/16-conny-groenewegen-2013-14-aw-20130317_028-thumb-500xauto-173654.jpg
+  - alt: primary explorers
+    image: /assets/15-conny-086.jpg
   - alt: primary explorers
     image: /assets/16-conny-093.jpg
   - alt: primary explorers
