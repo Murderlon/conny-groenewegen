@@ -5,7 +5,7 @@ title: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
 headerImage:
   alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
   image: /assets/01-nugget-coat.jpg
-vimeoID: ''
+vimeoID: '323214204'
 images:
   - alt: Alchemy Mercedes Benz Dutch Fashion Awards 2011-12
     image: /assets/01-nugget-coat.jpg
