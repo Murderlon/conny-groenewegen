@@ -54,3 +54,5 @@ Archetypical garments such as sweaters and bomber jackets have been ‘recoded�
 The looped plastic monofilament rhythmically creates rigidity, which allows the support and direction to softer yarns made of virgin wool and opulent fake fur.
 
 The knitted monofilament becomes a constructive 3D element that graphically accentuates the outlines of the upper body’s muscular character. By adhering to the anatomy and turning it inside out to create an exoskeleton, the shapes have both a futuristic and archaic appearance.
+
+Photography: Hessel Waalewijn
