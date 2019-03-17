@@ -10,7 +10,6 @@ images:
   - image: /assets/muze_groenewegen_wcfs17_047003.jpg
   - image: /assets/muze_groenewegen_wcfs17_162c006.jpg
   - image: /assets/muze_groenewegen_wcfs17_188b004.jpg
-  - image: /assets/muze_groenewegen_wcfs17_195b006.jpg
   - image: /assets/muze_groenewegen_wcfs17_070007.jpg
 ---
 September 29th 2016 at Hôtel d’Avaray, residence of the ambassador of the Kingdom of the Netherlands in Paris
