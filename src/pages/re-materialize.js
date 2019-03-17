@@ -1,8 +1,13 @@
 import React, { Fragment } from 'react'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
+import GatsbyLink from 'gatsby-link'
 
 import CategoryHeader from '../components/CategoryHeader'
+
+const Link = styled(GatsbyLink)`
+  border-bottom: 1px solid white;
+`
 
 const Image = styled(Img)`
   z-index: -1;
@@ -66,16 +71,23 @@ const ReMaterialize = ({ data }) => {
     Kay:
       'Felted wool/angora knit with a layer of silk organza resulting in light organza ruffles at the hem.'
   }
+  console.log(data)
   return (
     <Fragment>
-      <CategoryHeader title="Materialize" color="materializeColor">
-        <p>
-          My research traces back to the origins of methods. Peeling off tired
-          layers of self-evidence to find a sparkle of unexpected material
-          behaviour announcing new potentials for future archetypes.
-        </p>
-      </CategoryHeader>
+      <CategoryHeader title="Materialize" color="materializeColor" />
       <Article>
+        <h2>Primary Explorers fabrics</h2>
+        <p>
+          A delicate organza, satin or chiffon woven silk is felted on top of a
+          loose and open wool knit, a method that results in tactile, compressed
+          and layered fabrics. The difference in structure relates to the
+          pattern and concentration of wool that varies in each knitted
+          material. the designs for the{' '}
+          <Link to="/re-couture/primary-explorers-tokyo-fashion-week-aw-2013-14">
+            Primary Explorers collection
+          </Link>{' '}
+          made with this technique are 3D felted to make seamless garments.
+        </p>
         {Object.keys(data).map((key, i) => {
           return (
             <Wrapper key={key}>
