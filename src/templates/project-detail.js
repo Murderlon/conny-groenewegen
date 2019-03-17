@@ -22,7 +22,7 @@ export default function Template({ data }) {
     title,
     headerImage,
     vimeoID,
-    images
+    images,
   } = data.markdownRemark.frontmatter
   const parent = id =>
     id.includes('re-couture')
@@ -53,22 +53,27 @@ export default function Template({ data }) {
             'max-height': 300,
             title: false,
             portrait: false,
-            byline: false
+            byline: false,
           }}
         />
       )}
 
-      {images &&
-        images.length > 0 && (
-          <ImageGrid>
-            {images.map(
-              ({ src, alt }, i) =>
-                delve(src, 'childImageSharp.sizes') && (
-                  <Img key={i} sizes={src.childImageSharp.sizes} alt={alt} />
-                )
-            )}
-          </ImageGrid>
-        )}
+      {images && images.length > 0 && (
+        <ImageGrid>
+          {images.map(
+            ({ src, alt }, i) =>
+              delve(src, 'childImageSharp.sizes') && (
+                <Img key={i} sizes={src.childImageSharp.sizes} alt={alt} />
+              ),
+          )}
+        </ImageGrid>
+      )}
+
+      <p>
+        <ReturnLink to={parent(data.markdownRemark.id).link}>
+          {parent(data.markdownRemark.id).label}
+        </ReturnLink>
+      </p>
     </Fragment>
   )
 }
