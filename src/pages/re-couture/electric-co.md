@@ -6,7 +6,7 @@ headerImage:
   alt: >-
     girl with black helmet, structured knit sweater, black and white, orange
     background with blue sky
-  image: /assets/marom_170316_8342.jpeg
+  image: ''
 vimeoID: '324813965'
 images:
   - alt: >-
