@@ -1,7 +1,7 @@
 ---
 templateKey: project-detail
 category: collections
-title: ELECTRIC CO
+title: ELECTRIC CO sweaters and bomber jackets
 headerImage:
   alt: 'girl with black helmet, structured white knit sweater'
   image: /assets/structure4.jpg
