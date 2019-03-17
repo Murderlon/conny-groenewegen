@@ -156,18 +156,18 @@ export const MicroscopeControlIcon = styled(ControlIcon)`
 `
 
 const Posed = posed.div({
-  space: {
-    x: 84,
+  materialize: {
+    x: 80,
     y: ({ i }) => (i == 0 ? 0 : i == 1 ? -10 : -30),
     opacity: ({ i }) => (i == 0 ? 1 : 0.6)
   },
   couture: {
-    x: 17,
+    x: -15,
     y: ({ i }) => (i !== 1 ? -10 : 0),
     opacity: ({ i }) => (i !== 1 ? 0.6 : 1)
   },
-  materialize: {
-    x: -77,
+  space: {
+    x: -85,
     y: ({ i }) => (i == 0 ? -30 : i == 1 ? -10 : 0),
     opacity: ({ i }) => (i == 2 ? 1 : 0.6)
   }

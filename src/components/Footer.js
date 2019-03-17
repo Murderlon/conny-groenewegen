@@ -1,8 +1,8 @@
-import React from 'react'
-import GatsbyLink from 'gatsby-link'
-import styled from 'styled-components'
+import React from "react";
+import GatsbyLink from "gatsby-link";
+import styled from "styled-components";
 
-import LogoSVG from '../icons/logo.svg'
+import LogoSVG from "../icons/logo.svg";
 
 const StyledFooter = styled.footer`
   overflow: hidden;
@@ -23,21 +23,22 @@ const StyledFooter = styled.footer`
   li {
     margin-bottom: ${({ theme }) => theme.spacing.small};
   }
-`
+`;
 
 const Logo = styled(LogoSVG)`
   color: ${p => p.theme.black};
   margin-top: ${({ theme }) => theme.spacing.small};
-`
+`;
 
 const Link = ({ to, children }) => (
   <GatsbyLink
     exact
     to={to}
-    activeStyle={{ textDecoration: 'none', fontWeight: '600' }}>
+    activeStyle={{ textDecoration: "none", fontWeight: "600" }}
+  >
     {children}
   </GatsbyLink>
-)
+);
 
 const Footer = () => (
   <StyledFooter>
@@ -48,13 +49,13 @@ const Footer = () => (
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/re-space">Re-Space</Link>
+            <Link to="/re-materialize">Re-Materialize</Link>
           </li>
           <li>
             <Link to="/re-couture">Re-Couture</Link>
           </li>
           <li>
-            <Link to="/re-materialize">Re-Materialize</Link>
+            <Link to="/re-space">Re-Space</Link>
           </li>
           <li>
             <Link to="/about">About</Link>
@@ -64,6 +65,6 @@ const Footer = () => (
       <Logo />
     </div>
   </StyledFooter>
-)
+);
 
-export default Footer
+export default Footer;

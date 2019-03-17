@@ -46,22 +46,22 @@ class Index extends Component {
     this.colors = {
       space: this.props.theme.spaceColor,
       couture: this.props.theme.coutureColor,
-      materialize: this.props.theme.materializeColor,
+      materialize: this.props.theme.materializeColor
     }
     this.state = {
       categories: [
-        { label: 'Space', name: 'category', value: 'space' },
-        { label: 'Couture', name: 'category', value: 'couture' },
         { label: 'Materialize', name: 'category', value: 'materialize' },
+        { label: 'Couture', name: 'category', value: 'couture' },
+        { label: 'Space', name: 'category', value: 'space' }
       ],
-      active: { category: 'couture', color: this.props.theme.coutureColor },
+      active: { category: 'couture', color: this.props.theme.coutureColor }
     }
   }
 
   handleCategoryChange = ({ target }) => {
     if (target.value !== this.state.active.category) {
       return this.setState({
-        active: { category: target.value, color: this.colors[target.value] },
+        active: { category: target.value, color: this.colors[target.value] }
       })
     }
   }
