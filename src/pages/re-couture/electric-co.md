@@ -10,17 +10,17 @@ images:
   - alt: >-
       girl with black helmet, structured white knit sweater, sculptural body
       shape with fabric structure in background
-    image: /assets/bianca.jpg
+    image: /assets/bianca-jumper-bgroot.jpg
   - image: /assets/sillhouette2-new.jpg
   - alt: >-
       girl with black helmet, structured semi transparent knit sweater, plastic
       monofilament and wool, with fabric structure in background
-    image: /assets/cressida.jpg
+    image: /assets/cressida-bomber-bgroot.jpg
   - image: /assets/sillhouette3.jpg
   - alt: >-
       girl with black helmet, structured black and white knit sweater, graphic,
       fabric structure in background
-    image: /assets/margaret.jpg
+    image: /assets/margaret-jumper-bgroot.jpg
   - image: /assets/sillhouette4.jpg
   - alt: >-
       girl with black helmet, structured black and white knit sweater with fake
