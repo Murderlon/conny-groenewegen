@@ -5,7 +5,7 @@ title: ELECTRIC CO sweaters and bomber jackets
 headerImage:
   alt: 'girl with black helmet, structured white knit sweater'
   image: /assets/0-product-sleeve-diana.jpg
-vimeoID: '324813965'
+vimeoID: '325072102'
 images:
   - image: /assets/1-product-bianca.jpg
   - image: /assets/2-sillhouette-bianca.jpg
