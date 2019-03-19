@@ -56,4 +56,4 @@ Extra: Mercedes-Benz Dutch Fashion Award winner —2011
 
 “The jury was instantly and unanimously convinced by the artistic integrity of this designer who provides the fashion industry with much needed oxygen” Mrs. Fabiana Giacomotti, the Editor-in-chief of Fashion Illustrated, and Mr. Armand Hadida, owner of L’Eclaireur and Tranoï in Paris declared about the winning designer Conny Groenewegen, on behalf of the entire jury.
 
-Campaign image by Juul Kraijer, catwalk photography by Team Peter Stigter
+Photography: Team Peter Stigter
