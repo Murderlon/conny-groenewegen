@@ -13,15 +13,6 @@ const Image = styled(Img)`
   z-index: -1;
 `
 
-const Article = styled.article`
-  div:nth-child(2) > div:nth-of-type(2),
-  div:nth-child(6) > div:nth-of-type(2),
-  div:nth-child(8) > div:nth-of-type(2) {
-    border: 2px solid ${p => p.theme.black};
-    color: ${p => p.theme.black};
-  }
-`
-
 const Wrapper = styled.div`
   position: relative;
   margin: ${p => p.theme.spacing.huge} 0;
@@ -56,26 +47,42 @@ const Element = styled.div`
 `
 
 const ReMaterialize = ({ data }) => {
-  const content = {
-    Tania:
-      'Felted knit in wool/angora/silk yarn partly and seamlessly layered with a fine woven silk satin.',
-    Gerlinde:
-      'Felted knit in wool/angora/silk yarn partly and seamlessly layered with a fine woven silk satin.',
-    Octavie: 'Striped and felted knit in wool/angora and cotton.',
-    Renata: 'Structure knit in retro-reflective yarn with glass microbeads.',
-    Mimas: 'Analine leather surface connected to a layer of hand knit wool.',
-    Aimee:
-      'Felted wool/angora and silk knit with bubbly and soft hairy surface',
-    Krystyna:
-      'Felted wool/angora knit with a layer of silk organza which seamlessly merges into a singular semi-transparent organza fabric.',
-    Kay:
-      'Felted wool/angora knit with a layer of silk organza resulting in light organza ruffles at the hem.'
-  }
-  console.log(data)
+  const primaryExploresImages = data.primaryexplores.edges
+  const electricoImages = data.electrico.edges
+
   return (
     <Fragment>
       <CategoryHeader title="Materialize" color="materializeColor" />
-      <Article>
+      <article>
+        <h2>Elecric Co fabrics</h2>
+        <p>
+          The fabrics are knitted with plastic monofilaments, up-cycled from the
+          textile industry. The looped plastic monofilament rhythmically creates
+          rigidity, which allows the support and direction to softer yarns made
+          of virgin wool and opulent fake fur. The knitted monofilament becomes
+          a constructive 3D element in{' '}
+          <Link to="https://electricco.co/">ELECTRIC CO</Link> designs that
+          graphically accentuates the outlines of the upper body’s muscular
+          character. By adhering to the anatomy and turning it inside out to
+          create an exoskeleton, the shapes have both a futuristic and archaic
+          appearance.{' '}
+        </p>
+        {electricoImages.map(({ node }, i) => {
+          if (!node.childImageSharp) return null
+          return (
+            <Wrapper key={node.name}>
+              <Image sizes={node.childImageSharp.sizes} />
+              <Element index={i}>
+                <span>0{i + 1}</span>
+                <span>{node.name.substring(0, 2)}</span>
+                <h2>{node.name}</h2>
+              </Element>
+            </Wrapper>
+          )
+        })}
+      </article>
+
+      <article>
         <h2>Primary Explorers fabrics</h2>
         <p>
           A delicate organza, satin or chiffon woven silk is felted on top of a
@@ -88,20 +95,20 @@ const ReMaterialize = ({ data }) => {
           </Link>{' '}
           made with this technique are 3D felted to make seamless garments.
         </p>
-        {Object.keys(data).map((key, i) => {
+        {primaryExploresImages.map(({ node }, i) => {
+          if (!node.childImageSharp) return null
           return (
-            <Wrapper key={key}>
-              <Image sizes={data[key].childImageSharp.sizes} />
+            <Wrapper key={node.name}>
+              <Image sizes={node.childImageSharp.sizes} />
               <Element index={i}>
                 <span>0{i + 1}</span>
-                <span>{key.substring(0, 2)}</span>
-                <h2>{key}</h2>
+                <span>{node.name.substring(0, 2)}</span>
+                <h2>{node.name}</h2>
               </Element>
-              <p>{content[key]}</p>
             </Wrapper>
           )
         })}
-      </Article>
+      </article>
     </Fragment>
   )
 }
@@ -117,30 +124,26 @@ export const MaterializeImageFragment = graphql`
 `
 
 export const query = graphql`
-  query MaterializeImages {
-    Tania: file(id: { regex: "/Tania/" }) {
-      ...MaterializeImageFragment
+  query MatializeImages {
+    electrico: allFile(
+      filter: { relativePath: { regex: "/materialize/electricco/" } }
+    ) {
+      edges {
+        node {
+          name
+          ...MaterializeImageFragment
+        }
+      }
     }
-    Gerlinde: file(id: { regex: "/Gerlinde/" }) {
-      ...MaterializeImageFragment
-    }
-    Octavie: file(id: { regex: "/Octavie/" }) {
-      ...MaterializeImageFragment
-    }
-    Renata: file(id: { regex: "/Renata/" }) {
-      ...MaterializeImageFragment
-    }
-    Mimas: file(id: { regex: "/Mimas/" }) {
-      ...MaterializeImageFragment
-    }
-    Aimee: file(id: { regex: "/Aimee/" }) {
-      ...MaterializeImageFragment
-    }
-    Krystyna: file(id: { regex: "/Krystyna/" }) {
-      ...MaterializeImageFragment
-    }
-    Kay: file(id: { regex: "/Kay/" }) {
-      ...MaterializeImageFragment
+    primaryexplores: allFile(
+      filter: { relativePath: { regex: "/materialize/primaryexplores/" } }
+    ) {
+      edges {
+        node {
+          name
+          ...MaterializeImageFragment
+        }
+      }
     }
   }
 `
