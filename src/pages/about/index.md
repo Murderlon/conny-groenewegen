@@ -2,7 +2,7 @@
 templateKey: about
 vimeoID: ''
 ---
-![](/assets/portrait-cg-landscape.jpg)
+![null](/assets/portrait-cg-landscape.jpg)
 
 ## My working method
 
@@ -21,3 +21,5 @@ Zeeburgerdijk 25G
 1093 SK
 
 Amsterdam
+
+studio@connygroenewegen.nl
